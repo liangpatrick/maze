@@ -281,17 +281,17 @@ public class Maze {
 //        System.out.println("End:");
 //        printMaze(m);
 
-//        ArrayList<Double> agentOneSurvivalRates = runAgentOne(100);
+        ArrayList<Double> agentOneSurvivalRates = runAgentOne(100);
 ////        int sumOne = 0;
-        ArrayList<Double> agentTwoSurvivalRates = runAgentTwo(100);
-//        ArrayList<Double> agentThreeSurvivalRates = runAgentThree(100);
-//        for (int x = 0; x < agentOneSurvivalRates.size(); x++) {
-//            System.out.println("Agent One #" + x + ":\t" + agentOneSurvivalRates.get(x));
-////            sumOne += agentOneSurvivalRates.get(x);
-////            System.out.println("Agent Two:\t" + agentTwoSurvivalRates.get(x));
-//            System.out.println("Agent Three:\t" + agentThreeSurvivalRates.get(x));
-//            System.out.println();
-//        }
+//        ArrayList<Double> agentTwoSurvivalRates = runAgentTwo(100);
+        ArrayList<Double> agentThreeSurvivalRates = runAgentThree(100);
+        for (int x = 0; x < agentOneSurvivalRates.size(); x++) {
+            System.out.println("Agent One #" + x + ":\t" + agentOneSurvivalRates.get(x));
+//            sumOne += agentOneSurvivalRates.get(x);
+//            System.out.println("Agent Two:\t" + agentTwoSurvivalRates.get(x));
+            System.out.println("Agent Three:\t" + agentThreeSurvivalRates.get(x));
+            System.out.println();
+        }
 //        System.out.println("Avg a1: " + (double)sumOne/100);
         long endTime = System.nanoTime();
         long duration = (endTime - startTime)/(long)Math.pow(10,9);
