@@ -55,7 +55,7 @@ public class Maze {
 //      do this each time so small can be both accessible anywhere and won't have any repeat cells
         small = new HashMap<List<Integer>, Integer>();
         verifyMaze(maze.length-1, maze.length-1, visited);
-//        System.out.println(visited.toString());
+
         return visited;
     }
 //   BFS to verify if the there is a path from T to S; finds connected component(aka visitable cells); finds shortest path from each cell to T;
@@ -243,66 +243,32 @@ public class Maze {
 
 
     public static void main(String[] args) {
-//        PriorityQueue<Agents.index> f = new PriorityQueue<>(comparingInt(Agents.index::getF));
-//        Agents.index temp =  new Agents.index(0,1, null);
-//        temp.f = 1;
-//        f.add(temp);
-//        temp =  new Agents.index(4,1, null);
-//        temp.f = 3;
-//        f.add(temp);
-//        temp =  new Agents.index(2,1, null);
-//        temp.f = 2;
-//        f.add(temp);
-//        temp =  new Agents.index(1,1, null);
-//        temp.f = 3;
-//        f.add(temp);
-//        temp =  new Agents.index(3,1, null);
-//        temp.f = 4;
-//        f.add(temp);
-//        Agents.index t = new Agents.index(1,1, temp);
-//
-//        System.out.println(f.contains(t));
-//        System.out.println(f.remove(t));
-////        t.f = 100;
-////        f.add(t);
-//
-//        while(!f.isEmpty()){
-//            Agents.index l = f.poll();
-//            System.out.println(l.x + ", " + l.y + "; " + l.f);
-//        }
-//        HashMap<List<Integer>, Boolean> h = new HashMap<List<Integer>, Boolean>();
-//        h.put(List.of(1, 2), true);
-//        System.out.println(h.containsKey(List.of(1,2)));
 
 
 //      maze Object created
         Maze maze = new Maze();
         int count = 0;
-//        while (count < 10){
-//            Agents.addGhosts(2, maze.generateMaze());
-//            count+=1;
-//        }
 
 //      adds valid mazes to a stack of mazes
         long startTime = System.nanoTime();
-//        maze.generateMaze();
-//        maze.verifyMaze();
+        maze.generateMaze();
+        maze.verifyMaze();
 //        printMaze(maze.maze);
 
 
-//        char[][]m = maze.generateMaze();
-//        HashSet<List<Integer>> v = maze.verifyMaze();
-//        while (!v.contains(List.of(0, 0))){
-//            m = maze.generateMaze();
-//            v = maze.verifyMaze();
-//            break;
-//
-//        }
+        char[][]m = maze.generateMaze();
+        HashSet<List<Integer>> v = maze.verifyMaze();
+        while (!v.contains(List.of(0, 0))){
+            m = maze.generateMaze();
+            v = maze.verifyMaze();
+            break;
+
+        }
 //        System.out.println(v.toString());
 //        printMaze(m);
 //        for(int x = 0; x < m.length; x++) {
 //            for (int y = 0; y < m.length; y++)
-//                System.out.print(maze.small[x][y]+ " ");
+//                System.out.print(maze.small.get(List.of(x, y))+ " ");
 //            System.out.println();
 //        }
 
@@ -315,17 +281,17 @@ public class Maze {
 //        System.out.println("End:");
 //        printMaze(m);
 
-        ArrayList<Double> agentOneSurvivalRates = runAgentOne(100);
-//        int sumOne = 0;
-//        ArrayList<Double> agentTwoSurvivalRates = runAgentTwo(100);
-        ArrayList<Double> agentThreeSurvivalRates = runAgentThree(100);
-        for (int x = 0; x < agentOneSurvivalRates.size(); x++) {
-            System.out.println("Agent One #" + x + ":\t" + agentOneSurvivalRates.get(x));
-//            sumOne += agentOneSurvivalRates.get(x);
-//            System.out.println("Agent Two:\t" + agentTwoSurvivalRates.get(x));
-            System.out.println("Agent Three:\t" + agentThreeSurvivalRates.get(x));
-            System.out.println();
-        }
+//        ArrayList<Double> agentOneSurvivalRates = runAgentOne(100);
+////        int sumOne = 0;
+        ArrayList<Double> agentTwoSurvivalRates = runAgentTwo(100);
+//        ArrayList<Double> agentThreeSurvivalRates = runAgentThree(100);
+//        for (int x = 0; x < agentOneSurvivalRates.size(); x++) {
+//            System.out.println("Agent One #" + x + ":\t" + agentOneSurvivalRates.get(x));
+////            sumOne += agentOneSurvivalRates.get(x);
+////            System.out.println("Agent Two:\t" + agentTwoSurvivalRates.get(x));
+//            System.out.println("Agent Three:\t" + agentThreeSurvivalRates.get(x));
+//            System.out.println();
+//        }
 //        System.out.println("Avg a1: " + (double)sumOne/100);
         long endTime = System.nanoTime();
         long duration = (endTime - startTime)/(long)Math.pow(10,9);

@@ -241,7 +241,6 @@ public class Agents {
                     }
                     else if (prevUtil == utility){
 //                        calculate a tie breaker based on shortest path; use hashmap set to decide!!!!!
-//                        System.out.println(currX + ", " + currY + "; " + newX + ", " + newY);
                         if(small.get(List.of(currX, currY)) < small.get(List.of(newX, newY))){
                             newX = currX;
                             newY = currY;
@@ -314,20 +313,17 @@ public class Agents {
         int start = 0, end = 0;
 
         List<index> path = findPath(start, end, maze);
+        index[] ghosts = addGhosts(num, maze, connectedComponent);
 //      array of index objects that store ghost positions so i can both accurately move them and keep track in case there is overlap
-        index[] ghosts = null;
-
         double[] distance = new double[num];
 //      simulates until either agent is dead or reaches the end of the maze
         while(maze[maze.length-1][maze.length-1] != 'A')
         {
+            index closestG = ghosts[indMin(distance)];
+            if(closestG.distance < 5){
 
-
-            if (ghosts == null) {
-                ghosts = addGhosts(num, maze, connectedComponent);
             }
-//          no path
-            if (path == null){
+            else if (path == null){
                 int ind = indMin(distance);
                 index closestGhost = ghosts[ind];
 //              if no valid move is found, then agent just remains in place
@@ -487,11 +483,6 @@ public class Agents {
 //        System.out.println("No path");
         return null;
     }
-
-
-
-
-
 
 
 //  uses recursion to get to the oldest node and then proceeds to add the rest of the nodes to the path list.
