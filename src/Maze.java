@@ -176,17 +176,20 @@ HashMap<List<Integer>, Integer> verifyMaze(){
                         success += 1;
 
                     }
-                    endTime = System.nanoTime();
-                    duration = (endTime - startTime)/(long)Math.pow(10,9);
-                    System.out.println("Iter #" + iter + "; Success: " + success +"; Time: " + duration);
+//                    endTime = System.nanoTime();
+//                    duration = (endTime - startTime)/(long)Math.pow(10,9);
+//                    System.out.println("Iter #" + iter + "; Success: " + success +"; Time: " + duration);
                 }
             }
             endTime = System.nanoTime();
             duration = (endTime - startTime)/(long)Math.pow(10,9);
-            System.out.println("Run #" + num+ ": " +success/100.0+"; Time: " + duration);
+            System.out.println("Finished Ghosts #" + num+ ": " +success/100.0+"; Time: " + duration);
             survivalRates.add(success/100.0);
 
         }
+        endTime = System.nanoTime();
+        duration = (endTime - startTime)/(long)Math.pow(10,9);
+        System.out.println("Total Time: " + duration);
         return survivalRates;
 
     }
