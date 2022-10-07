@@ -7,27 +7,22 @@ public class Maze {
 //  maze can now be used without passing in to a method as long as constructor is created
     char[][] maze;
 //  use hashmap/hashset for time and space complexity
-    HashMap<List<Integer>, Integer> small;
-    HashSet<List<Integer>> visited;
+    HashMap<List<Integer>, Integer> visited;
 //  row, col used for bfs
     private static int[] row = { -1, 0, 0, 1 };
     private static int[] col = { 0, -1, 1, 0 };
     public Maze(){
         char[][] maze = new char[51][51];
-        HashSet<List<Integer>> visited = new HashSet<>();
-        HashMap<List<Integer>, Integer> small = new HashMap<List<Integer>, Integer>();
+        HashMap<List<Integer>, Integer> visited =  new HashMap<>();
         this.maze = maze;
         this.visited = visited;
-        this.small = small;
     }
 //  constructor for testing
     public Maze(int param){
         char[][] maze = new char[param][param];
-        HashSet<List<Integer>> visited = new HashSet<>();
-        HashMap<List<Integer>, Integer> small = new HashMap<List<Integer>, Integer>();
+        HashMap<List<Integer>, Integer> visited = new HashMap<>();
         this.maze = maze;
         this.visited = visited;
-        this.small = small;
     }
 //  maze generator for when you want dynamic value. because maze is square, only need one input
     char[][] generateMaze(){
@@ -40,7 +35,7 @@ public class Maze {
             }
         }
         visited = verifyMaze();
-        if (!visited.contains(List.of(0, 0)) || visited == null){
+        if (!visited.containsKey(List.of(0, 0)) || visited == null){
             return generateMaze();
         }
         maze[0][0] = 'S';
@@ -50,22 +45,20 @@ public class Maze {
     }
 
 //  wrapper method
-    HashSet<List<Integer>> verifyMaze(){
-        HashSet<List<Integer>> visited = new HashSet<List<Integer>>();
+HashMap<List<Integer>, Integer> verifyMaze(){
+        HashMap<List<Integer>, Integer> visited = new HashMap<List<Integer>, Integer>();
 //      do this each time so small can be both accessible anywhere and won't have any repeat cells
-        small = new HashMap<List<Integer>, Integer>();
         verifyMaze(maze.length-1, maze.length-1, visited);
 
         return visited;
     }
 //   BFS to verify if the there is a path from T to S; finds connected component(aka visitable cells); finds shortest path from each cell to T;
-     void verifyMaze(int x, int y, HashSet<List<Integer>> visited){
+     void verifyMaze(int x, int y, HashMap<List<Integer>, Integer> visited){
 //      fringe to store cells that need to be visited
         Queue<Agents.index> fringe = new LinkedList<>();
 //      add beginning cell to fringe and visited
         fringe.add(new Agents.index(x,y, 0));
-        visited.add(List.of(x,y));
-        small.put(List.of(x,y), 0);
+        visited.put(List.of(x,y), 0);
         while(!fringe.isEmpty()) {
 //          use poll instead of remove so no errors are thrown
             Agents.index curr = fringe.poll();
@@ -76,10 +69,9 @@ public class Maze {
                 int currX = indX + row[i];
                 int currY = indY + col[i];
 //                System.out.println(currX +", " + currY);
-                if (0 <= currX && currX < maze.length && 0 <= currY && currY < maze[x].length && maze[currX][currY] != '#' &&  !visited.contains(List.of(currX, currY))){
-                    visited.add(List.of(currX, currY));
+                if (0 <= currX && currX < maze.length && 0 <= currY && currY < maze[x].length && maze[currX][currY] != '#' &&  !visited.containsKey(List.of(currX, currY))){
                     fringe.add(new Agents.index(currX, currY, distance+1));
-                    small.put(List.of(currX,currY), distance+1);
+                    visited.put(List.of(currX,currY), distance+1);
                 }
             }
 
@@ -113,7 +105,7 @@ public class Maze {
 //          how many mazes are made to solve for num number of ghosts
             for(int iter = 1; iter <= 100; iter++ ) {
                 char[][] m = maze.generateMaze();
-                if(maze.visited.contains(List.of(0, 0))) {
+                if(maze.visited.containsKey(List.of(0, 0))) {
                     if (Agents.agentOne(num, m, maze.visited)) {
                         success += 1;
 
@@ -146,7 +138,7 @@ public class Maze {
 //          how many mazes are made to solve for num number of ghosts
             for(int iter = 1; iter <= 100; iter++ ) {
                 char[][] m = maze.generateMaze();
-                if(maze.visited.contains(List.of(0, 0))) {
+                if(maze.visited.containsKey(List.of(0, 0))) {
                     if (Agents.agentTwo(num, m, maze.visited,0,0, null)) {
                         success += 1;
 
@@ -179,8 +171,8 @@ public class Maze {
 //          how many mazes are made to solve for num number of ghosts
             for(int iter = 1; iter <= 100; iter++ ) {
                 char[][] m = maze.generateMaze();
-                if(maze.visited.contains(List.of(0, 0))) {
-                    if (Agents.agentThree(num, m, maze.visited, maze.small)) {
+                if(maze.visited.containsKey(List.of(0, 0))) {
+                    if (Agents.agentThree(num, m, maze.visited)) {
                         success += 1;
 
                     }
@@ -256,14 +248,13 @@ public class Maze {
 //        printMaze(maze.maze);
 
 
-        char[][]m = maze.generateMaze();
-        HashSet<List<Integer>> v = maze.verifyMaze();
-        while (!v.contains(List.of(0, 0))){
-            m = maze.generateMaze();
-            v = maze.verifyMaze();
-            break;
-
-        }
+//        char[][]m = maze.generateMaze();
+//        HashMap<List<Integer>, Integer> v = maze.verifyMaze();
+//        while (!v.containsKey(List.of(0, 0))){
+//            m = maze.generateMaze();
+//            v = maze.verifyMaze();
+//
+//        }
 //        System.out.println(v.toString());
 //        printMaze(m);
 //        for(int x = 0; x < m.length; x++) {

@@ -66,7 +66,7 @@ public class Agents {
     private final static int[] col = { 0, -1, 1, 0 };
 
 //  agent one
-    static boolean agentOne(int num, char [][] maze, HashSet<List<Integer>> connectedComponent){
+    static boolean agentOne(int num, char [][] maze, HashMap<List<Integer>, Integer> connectedComponent){
         char [][] reference = new char[maze.length][];
         for(int i = 0; i < maze.length; i++)
             reference[i] = maze[i].clone();
@@ -106,7 +106,7 @@ public class Agents {
 
 
     }
-    static boolean agentTwo(int num, char [][] maze, HashSet<List<Integer>> connectedComponent, int s, int e, index[] ghost){
+    static boolean agentTwo(int num, char [][] maze, HashMap<List<Integer>, Integer> connectedComponent, int s, int e, index[] ghost){
         char [][] reference = new char[maze.length][];
         for(int i = 0; i < maze.length; i++)
             reference[i] = maze[i].clone();
@@ -185,7 +185,7 @@ public class Agents {
 
 
     }
-    static boolean agentThree(int num, char [][] maze, HashSet<List<Integer>> connectedComponent, HashMap<List<Integer>, Integer> small) {
+    static boolean agentThree(int num, char [][] maze, HashMap<List<Integer>, Integer> connectedComponent) {
 //        System.out.println(connectedComponent.size());
 //        System.out.println(small.size());
         char[][] reference = new char[maze.length][];
@@ -216,7 +216,7 @@ public class Agents {
                 currX = start + row[i];
                 currY = end + col[i];
 //              checks if move is valid
-                if (connectedComponent.contains(List.of(currX, currY)) && maze[currX][currY] != '*') {
+                if (connectedComponent.containsKey(List.of(currX, currY)) && maze[currX][currY] != '*') {
                     int utility = 0;
 //                  simulates agentTwo 3 times
                     for(int count = 0; count < 3; count++){
@@ -241,7 +241,7 @@ public class Agents {
                     }
                     else if (prevUtil == utility){
 //                        calculate a tie breaker based on shortest path; use hashmap set to decide!!!!!
-                        if(small.get(List.of(currX, currY)) < small.get(List.of(newX, newY))){
+                        if(connectedComponent.get(List.of(currX, currY)) < connectedComponent.get(List.of(newX, newY))){
                             newX = currX;
                             newY = currY;
                             prevUtil = utility;
@@ -306,7 +306,7 @@ public class Agents {
         return true;
     }
 
-    static boolean agentFour(int num, char [][] maze, HashSet<List<Integer>> connectedComponent, HashMap<List<Integer>, Integer> small){
+    static boolean agentFour(int num, char [][] maze, HashMap<List<Integer>, Integer> connectedComponent, HashMap<List<Integer>, Integer> small){
         char [][] reference = new char[maze.length][];
         for(int i = 0; i < maze.length; i++)
             reference[i] = maze[i].clone();
@@ -494,12 +494,12 @@ public class Agents {
         }
     }
 
-    static index moveAway(int tempStart, int tempEnd, int start, int end, index closestGhost, char[][] maze, HashSet<List<Integer>> connectedComponent){
+    static index moveAway(int tempStart, int tempEnd, int start, int end, index closestGhost, char[][] maze, HashMap<List<Integer>, Integer> connectedComponent){
         for (int i = 0; i < row.length; i++) {
             int currX = start + row[i];
             int currY = end + col[i];
 //                  checks if move is valid
-            if (connectedComponent.contains(List.of(currX, currY)) && maze[currX][currY] != '*') {
+            if (connectedComponent.containsKey(List.of(currX, currY)) && maze[currX][currY] != '*') {
 
                 tempStart = getDistance(closestGhost.x, closestGhost.y, currX, currY) < getDistance(closestGhost.x, closestGhost.y, tempStart, tempEnd) ? tempStart : currX;
                 tempEnd = getDistance(closestGhost.x, closestGhost.y, currX, currY) < getDistance(closestGhost.x, closestGhost.y, tempStart, tempEnd) ? tempEnd : currY;
@@ -512,7 +512,7 @@ public class Agents {
     }
 
     //  adds param number of ghosts to the maze and at random locations
-    static index[] addGhosts(int num, char[][] maze, HashSet<List<Integer>> connectedComponent){
+    static index[] addGhosts(int num, char[][] maze, HashMap<List<Integer>, Integer> connectedComponent){
         index[] list = new index[num];
 //      gets random pair in maze
         while (num > 0) {
@@ -520,7 +520,7 @@ public class Agents {
 //            if ((indx == 0 && indy == 0) || (indx == maze.length-1 && indy == maze[0].length-1)){
 //                continue;
 //            }
-            if (connectedComponent.contains(List.of(indx, indy))) {
+            if (connectedComponent.containsKey(List.of(indx, indy))) {
                 maze[indx][indy] = '*';
                 list[list.length - num] = new index(indx, indy);
                 num -= 1;
