@@ -248,6 +248,12 @@ public class Agents {
                             newY = currY;
 
                         }
+                        else if (connectedComponent.get(List.of(currX, currY)) == connectedComponent.get(List.of(newX, newY))){
+                            if (currX > newX && currY > newY){
+                                newX = currX;
+                                newY = currY;
+                            }
+                        }
                     }
                     prevUtil = utility;
 
