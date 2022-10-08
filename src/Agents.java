@@ -236,7 +236,6 @@ public class Agents {
                     if (prevUtil < utility){
                         newX = currX;
                         newY = currY;
-                        prevUtil = utility;
                     }
                     else if (prevUtil == utility){
 //                        calculate a tie breaker based on shortest path; use hashmap set to decide!!!!!
@@ -247,10 +246,10 @@ public class Agents {
                         if(connectedComponent.get(List.of(currX, currY)) < connectedComponent.get(List.of(newX, newY))){
                             newX = currX;
                             newY = currY;
-                            prevUtil = utility;
 
                         }
                     }
+                    prevUtil = utility;
 
 
                 }
@@ -263,7 +262,6 @@ public class Agents {
 //              gets index of closest ghost
                 int ind = indMin(distance);
                 index closestGhost = ghosts[ind];
-//              if no valid move is found, then agent just remains in place
                 int tempStart = start, tempEnd = end;
 //              moves away from closestGhost
                 index pos = moveAway(tempStart, tempEnd, start, end, closestGhost, maze, connectedComponent);
