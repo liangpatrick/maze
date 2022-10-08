@@ -200,15 +200,14 @@ public class Agents {
 //      simulates until either agent is dead or reaches the end of the maze
 //      currently, as I understand it, I have to just run agent two at all possible moves, then decide which path to go based on the utility value that the simulations produce
 //      am also allowed to go backwards???
-//      if all odds are equal, tie break goes to down/right
-
+//      if all odds are equal, tie break goes to shortest cell
         while(maze[maze.length-1][maze.length-1] != 'A'){
 //            Maze.printMaze(maze);
 //            System.out.println(start + ", " + end);
 //          new positions which are updated when max utility is found
             int newX = start, newY = end;
 //          used to store max utility
-            int prevUtil = 0;
+            int prevUtil = -1;
 //          goes through each possible move and then simulates
             for (int i = 0; i < row.length; i++) {
                 int currX = 0;
