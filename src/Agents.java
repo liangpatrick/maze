@@ -241,6 +241,10 @@ public class Agents {
                     }
                     else if (prevUtil == utility){
 //                        calculate a tie breaker based on shortest path; use hashmap set to decide!!!!!
+                        if(connectedComponent.get(List.of(currX, currY)) == null||  connectedComponent.get(List.of(newX, newY)) == null){
+                            System.out.println(currX + ", " + currY + "; " + newX + ", " + newY);
+                            System.out.println(connectedComponent.keySet().toString());
+                        }
                         if(connectedComponent.get(List.of(currX, currY)) < connectedComponent.get(List.of(newX, newY))){
                             newX = currX;
                             newY = currY;
