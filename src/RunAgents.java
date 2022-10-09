@@ -34,15 +34,15 @@ public class RunAgents extends Thread{
             if(Agents.agentTwo(ghosts, m, maze.visited, start, end, agent2)){
                 survivalRatesTwo[ghosts] += 1;
             }
-//            m = maze.generateMaze();
-//            if(Agents.agentThree(ghosts, m, maze.visited, start, end, agent2)){
-//                survivalRatesThree[ghosts] += 1;
-//            }
+            m = maze.generateMaze();
+            if(Agents.agentThree(ghosts, m, maze.visited, start, end, agent2)){
+                survivalRatesThree[ghosts] += 1;
+            }
 
         }
         endTime = System.nanoTime();
         duration = (endTime - startTime)/(long)Math.pow(10,9);
-        System.out.println("Ghosts #" + ghosts + "Agents Time: " + duration);
+        System.out.println("Ghosts #" + ghosts + "; Agents Time: " + duration);
 //        System.out.println("a1 ghosts #" +  ghosts + ": " +survivalRatesOne[ghosts]/100);
 //        System.out.println("a2 ghosts #" +  ghosts + ": " +survivalRatesTwo[ghosts]/100);
 //        System.out.println("a3 ghosts #" +  ghosts + ": " +survivalRatesThree[ghosts]/100);
