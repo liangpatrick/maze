@@ -66,7 +66,7 @@ public class Agents {
     private final static int[] col = { 0, -1, 1, 0 };
 
 //  agent one
-    static boolean agentOne(int num, char [][] maze, HashMap<List<Integer>, Integer> connectedComponent){
+    static boolean agentOne(int num, char [][] maze, HashMap<List<Integer>, Integer> connectedComponent, int d, int dd, index[] nulll){
         char [][] reference = new char[maze.length][];
         for(int i = 0; i < maze.length; i++)
             reference[i] = maze[i].clone();
@@ -76,7 +76,7 @@ public class Agents {
         int start = 0, end = 0;
 //        Maze.printMaze(maze);
         List<index> path = findPath(start, end, maze);
-
+//        System.out.println(path.size());
 //      array of index objects that store ghost positions so i can both accurately move them and keep track in case there is overlap
 //        Maze.printMaze(maze);
         index[] ghosts = addGhosts(num, maze, connectedComponent);
@@ -185,7 +185,7 @@ public class Agents {
 
 
     }
-    static boolean agentThree(int num, char [][] maze, HashMap<List<Integer>, Integer> connectedComponent) {
+    static boolean agentThree(int num, char [][] maze, HashMap<List<Integer>, Integer> connectedComponent, int e, int ee, index[] nulll) {
 //        System.out.println(connectedComponent.size());
 //        System.out.println(small.size());
         char[][] reference = new char[maze.length][];
