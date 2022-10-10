@@ -1,0 +1,30 @@
+Agent One Total: 16
+Ghosts #0
+Finished Ghosts #0: 1.0; Time: 274
+Ghosts #1
+Finished Ghosts #1: 0.95; Time: 10230
+Ghosts #2
+Finished Ghosts #2: 0.96; Time: 18450
+Ghosts #3
+Finished Ghosts #3: 0.9; Time: 20964
+Ghosts #4
+Finished Ghosts #4: 0.82; Time: 28721
+Ghosts #5
+Finished Ghosts #5: 0.84; Time: 31877
+Ghosts #6
+Finished Ghosts #6: 0.83; Time: 41374
+Ghosts #7
+Finished Ghosts #7: 0.79; Time: 47417
+Ghosts #8
+Finished Ghosts #8: 0.71; Time: 61770
+Ghosts #9
+Finished Ghosts #9: 0.74; Time: 76143
+Ghosts #10
+Finished Ghosts #10: 0.68; Time: 80699
+Ghosts #11
+Finished Ghosts #11: 0.59; Time: 108379
+Ghosts #12
+Finished Ghosts #12: 0.65; Time: 139913
+Ghosts #13
+Finished Ghosts #13: 0.64; Time: 146199
+Ghosts #14
