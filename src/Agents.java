@@ -218,7 +218,7 @@ public class Agents {
                 if (connectedComponent.containsKey(List.of(currX, currY)) && maze[currX][currY] != '*') {
                     int utility = 0;
 //                  simulates agentTwo 3 times
-                    for(int count = 0; count < 3; count++){
+                    for(int count = 0; count < 8; count++){
 //                      make duplicate so nothing changes
                         char[][] temp = new char[maze.length][];
                         for (int x = 0; x < maze.length; x++)
@@ -313,7 +313,7 @@ public class Agents {
         return true;
     }
 
-    static boolean agentFour(int num, char [][] maze, HashMap<List<Integer>, Integer> connectedComponent, HashMap<List<Integer>, Integer> small){
+    static boolean agentFour(int num, char [][] maze, HashMap<List<Integer>, Integer> connectedComponent, int e, int ee, index[] nulll){
         char [][] reference = new char[maze.length][];
         for(int i = 0; i < maze.length; i++)
             reference[i] = maze[i].clone();

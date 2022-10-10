@@ -804,3 +804,6 @@ A1 ghosts #99: 0.02
 A2 ghosts #99: 0.05
 A3 ghosts #99: 0.01
 
+A1 ghosts #100: 0.0
+A2 ghosts #100: 0.05
+A3 ghosts #100: 0.03
