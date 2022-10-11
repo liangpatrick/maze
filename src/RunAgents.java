@@ -23,32 +23,30 @@ public class RunAgents extends Thread{
         long duration;
         for(int iter = 1; iter <= 100; iter++ ) {
             char[][] m = maze.generateMaze(51);
-            if(Agents.agentOne(ghosts, m, maze.visited,0, 0, null)){
-                survivalRatesOne[ghosts] += 1;
-            }
-            m = maze.generateMaze(51);
-            if(maze.visited.isEmpty())
-                System.out.println("fuck??");
-            if(Agents.agentTwo(ghosts, m, maze.visited,0, 0, null)){
-                survivalRatesTwo[ghosts] += 1;
-            }
-            m = maze.generateMaze(51);
-            if(Agents.agentThree(ghosts, m, maze.visited,0, 0, null)){
-                survivalRatesThree[ghosts] += 1;
-            }
-//            m = maze.generateMaze();
-//            if(Agents.agentFour(ghosts, m, maze.visited,0, 0, null)){
-//                survivalRatesFour[ghosts] += 1;
+//            if(Agents.agentOne(ghosts, m, maze.visited,0, 0, null)){
+//                survivalRatesOne[ghosts] += 1;
 //            }
+//            m = maze.generateMaze(51);
+//            if(Agents.agentTwo(ghosts, m, maze.visited,0, 0, null)){
+//                survivalRatesTwo[ghosts] += 1;
+//            }
+//            m = maze.generateMaze(51);
+//            if(Agents.agentThree(ghosts, m, maze.visited,0, 0, null)){
+//                survivalRatesThree[ghosts] += 1;
+//            }
+//            m = maze.generateMaze(51);
+            if(Agents.agentFour(ghosts, m, maze.visited,0, 0, null)){
+                survivalRatesFour[ghosts] += 1;
+            }
 
         }
         endTime = System.nanoTime();
         duration = (endTime - startTime)/(long)Math.pow(10,9);
         System.out.println("Ghosts #" + ghosts + "; Agents Time: " + duration);
-        System.out.println("a1 ghosts #" +  ghosts + ": " +survivalRatesOne[ghosts]/100);
-        System.out.println("a2 ghosts #" +  ghosts + ": " +survivalRatesTwo[ghosts]/100);
-        System.out.println("a3 ghosts #" +  ghosts + ": " +survivalRatesThree[ghosts]/100);
-//        System.out.println("a4 ghosts #" +  ghosts + ": " +survivalRatesFour[ghosts]/100);
+//        System.out.println("a1 ghosts #" +  ghosts + ": " +survivalRatesOne[ghosts]/100);
+//        System.out.println("a2 ghosts #" +  ghosts + ": " +survivalRatesTwo[ghosts]/100);
+//        System.out.println("a3 ghosts #" +  ghosts + ": " +survivalRatesThree[ghosts]/100);
+        System.out.println("a4 ghosts #" +  ghosts + ": " +survivalRatesFour[ghosts]/100);
 
 
 
@@ -64,7 +62,7 @@ public class RunAgents extends Thread{
         List<Thread> threadList = new ArrayList<Thread>();
         Thread t = null;
 //      spawns all threads
-        for (int num = 0; num <= ghosts; num++) {
+        for (int num = 0; num < ghosts; num++) {
             t = new RunAgents(num);
             t.start();
             threadList.add(t);
@@ -78,10 +76,10 @@ public class RunAgents extends Thread{
         duration = (endTime - startTime)/(long)Math.pow(10,9);
         System.out.println("Finished Time: " + duration);
         for( int x = 0; x < 101; x++) {
-            System.out.println("A1 ghosts #" +  x + ": " +survivalRatesOne[x]/100);
-            System.out.println("A2 ghosts #" +  x + ": " +survivalRatesTwo[x]/100);
-            System.out.println("A3 ghosts #" +  x + ": " +survivalRatesThree[x]/100);
-//            System.out.println("A4 ghosts #" +  x + ": " +survivalRatesFour[x]/100);
+//            System.out.println("A1 ghosts #" +  x + ": " +survivalRatesOne[x]/100);
+//            System.out.println("A2 ghosts #" +  x + ": " +survivalRatesTwo[x]/100);
+//            System.out.println("A3 ghosts #" +  x + ": " +survivalRatesThree[x]/100);
+            System.out.println("A4 ghosts #" +  x + ": " +survivalRatesFour[x]/100);
 //
 //            System.out.println();
         }
