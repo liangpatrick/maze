@@ -1,8 +1,4 @@
-import java.lang.reflect.Array;
 import java.util.*;
-
-import static java.util.Comparator.comparingInt;
-
 public class Maze {
 //  maze can now be used without passing in to a method as long as constructor is created
 //    char[][] maze;
@@ -12,16 +8,7 @@ public class Maze {
     private static int[] row = { -1, 0, 0, 1 };
     private static int[] col = { 0, -1, 1, 0 };
     public Maze(){
-//        char[][] maze = new char[51][51];
         HashMap<List<Integer>, Integer> visited =  new HashMap<>();
-//        this.maze = maze;
-        this.visited = visited;
-    }
-//  constructor for testing
-    public Maze(int param){
-//        char[][] maze = new char[param][param];
-        HashMap<List<Integer>, Integer> visited = new HashMap<>();
-//        this.maze = maze;
         this.visited = visited;
     }
 //  maze generator for when you want dynamic value. because maze is square, only need one input
@@ -36,6 +23,7 @@ public class Maze {
             }
         }
         visited = verifyMaze(maze);
+//      if maze is not solveable, recursively find one that is
         if (!visited.containsKey(List.of(0, 0)) || visited == null){
             return generateMaze();
         }
@@ -69,7 +57,7 @@ public class Maze {
             for (int i = 0; i < row.length; i++) {
                 int currX = indX + row[i];
                 int currY = indY + col[i];
-//                System.out.println(currX +", " + currY);
+//                checks bounds and if its a wall before adding
                 if (0 <= currX && currX < maze.length && 0 <= currY && currY < maze[x].length && maze[currX][currY] != '#' &&  !visited.containsKey(List.of(currX, currY))){
                     fringe.add(new Agents.index(currX, currY, distance+1));
                     visited.put(List.of(currX,currY), distance+1);
@@ -81,7 +69,7 @@ public class Maze {
 
 
 
-//  prints maze
+//  prints maze for debugging purposes
     static void printMaze(char [][] maze){
         for (char[] x : maze)
         {
@@ -94,10 +82,4 @@ public class Maze {
     }
 
 
-
-//    public static void main(String[] args) {
-//
-//
-//
-//    }
 }
