@@ -75,7 +75,7 @@ public class RunAgents extends Thread{
         endTime = System.nanoTime();
         duration = (endTime - startTime)/(long)Math.pow(10,9);
         System.out.println("Finished Time: " + duration);
-        for( int x = 0; x < 101; x++) {
+        for( int x = 0; x < ghosts; x++) {
             System.out.println("A1 ghosts #" +  x + ": " +survivalRatesOne[x]/100);
             System.out.println("A2 ghosts #" +  x + ": " +survivalRatesTwo[x]/100);
             System.out.println("A3 ghosts #" +  x + ": " +survivalRatesThree[x]/100);
