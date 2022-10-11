@@ -3,12 +3,13 @@ import java.util.HashMap;
 import java.util.List;
 
 public class RunAgents extends Thread{
+    static int length = 121;
     int ghosts;
     HashMap<List<Integer>, Integer> visited;
-    static double[] survivalRatesOne = new double[101];
-    static double[] survivalRatesTwo = new double[101];
-    static double[] survivalRatesThree = new double[101];
-    static double[] survivalRatesFour = new double[101];
+    static double[] survivalRatesOne = new double[length];
+    static double[] survivalRatesTwo = new double[length];
+    static double[] survivalRatesThree = new double[length];
+    static double[] survivalRatesFour = new double[length];
 
 //    initialize ghosts to run threads
     public RunAgents(int ghosts){
@@ -88,7 +89,7 @@ public class RunAgents extends Thread{
     }
 
     public static void main(String args[]) throws InterruptedException {
-        running(120);
+        running(length);
 
 
     }
