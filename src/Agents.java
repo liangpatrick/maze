@@ -66,7 +66,7 @@ public class Agents {
 
 //      stores path
         int start = 0, end = 0;
-        List<index> path = findPath(start, end, maze);
+        List<index> path = findPath(start, end, maze, connectedComponent);
 //      array of index objects that store ghost positions so i can both accurately move them and keep track in case there is overlap
         index[] ghosts = addGhosts(num, maze, connectedComponent);
         for (index curr: path){
@@ -107,7 +107,7 @@ public class Agents {
         while(maze[maze.length-1][maze.length-1] != 'A')
         {
 //          stores path
-            List<index> path = findPath(start, end, maze);
+            List<index> path = findPath(start, end, maze, connectedComponent);
 //            only activates when called by agent3
             if (ghosts == null) {
                 ghosts = addGhosts(num, maze, connectedComponent);
@@ -276,12 +276,13 @@ public class Agents {
 //      array of index objects that store ghost positions so i can both accurately move them and keep track in case there is overlap
         double[] distance = new double[num];
         moveGhosts(ghosts, reference, maze, distance, start, end);
-        for(double d: distance)
-            System.out.println(d);
+
         while(maze[maze.length-1][maze.length-1] != 'A')
         {
-            index closestGhost = ghosts[indMin(distance)];
-            if(closestGhost.distance < 5){
+//            Maze.printMaze(maze);
+            index closestGhost = num == 0 ? null : ghosts[indMin(distance)];
+
+            if(closestGhost != null && closestGhost.distance < 3){
 //              if no valid move is found, then agent just remains in place
                 int tempStart = start, tempEnd = end;
                 index pos = moveAway(tempStart, tempEnd, start, end, closestGhost, maze, connectedComponent);
@@ -324,11 +325,12 @@ public class Agents {
                 moveGhosts(ghosts, reference, maze, distance, start, end);
 //              this means ghosts have moved into same cell and the dude is dead
                 if (maze[start][end] != 'A') {
+                    System.out.println("dead");
                     return false;
                 }
             }
 
-
+//            Maze.printMaze(maze);
         }
 
 
@@ -339,50 +341,7 @@ public class Agents {
 
 
 
-//  standard bfs that returns the end node which has path to first node
-    private static List<index> bfs(int start, int end, char[][] maze){
-//      fringe to store cells that need to be visited
-        Queue<index> fringe = new LinkedList<>();
-//      originally used a 2d array but space complexity is too huge, so it is now a set.
-//        boolean[][] visited = new boolean[maze.length][maze[0].length];
-        HashSet<List<Integer>> visited = new HashSet();
-//      used to verify if end source has been achieved
-        int endX = maze.length-1, endY = maze[0].length-1;
-//      add beginning cell to fringe and visited
-        fringe.add(new index(start,end, null));
-        visited.add(List.of(start,end));
-        while(!fringe.isEmpty()) {
-//          use poll instead of remove so no errors are thrown
-            index curr = fringe.poll();
-//          indX and indY hold current positions, didn't want to keep using curr.x or curr.y for laziness sakes
-            int indX = curr.x, indY = curr.y;
-//            System.out.println(indX + ", " + indY + " start");
-//          if arrived at destination
-            if (indX == endX && indY == endY) {
-//                System.out.println("finish");
-                List<index> path = new ArrayList<>();;
-                getPath(curr, path);
-//                System.out.println("here");
-                return path;
-            }
-//          checks all neighbors to see if they are eligible to be added to the fringe
-            for (int i = 0; i < row.length; i++) {
-                int currX = indX + row[i];
-                int currY = indY + col[i];
-//                System.out.println(currX +", " + currY);
-                if (withinBounds(currX, currY, maze) && maze[currX][currY] != '*' && maze[currX][currY] != '#' && !visited.contains(List.of(currX, currY))) {
-                    visited.add(List.of(currX, currY));
-                    fringe.add(new index(currX, currY, curr));
-
-                }
-            }
-
-        }
-//        System.out.println("No path");
-        return null;
-    }
-
-    private static List<index> findPath(int start, int end, char[][] maze){
+    private static List<index> findPath(int start, int end, char[][] maze, HashMap<List<Integer>, Integer> connectedComponent){
 //      fringe to store cells that need to be visited
         PriorityQueue<Agents.index> fringe = new PriorityQueue<>(comparingInt(index::getF));
         HashMap<List<Integer>, Integer> visited = new HashMap<>();
@@ -410,9 +369,9 @@ public class Agents {
                 int currX = indX + row[i];
                 int currY = indY + col[i];
 //                bounds check
-                if (withinBounds(currX, currY, maze) && maze[currX][currY] != '*' && maze[currX][currY] != '#') {
+                if (connectedComponent.containsKey(List.of(currX, currY)) && maze[currX][currY] != '*') {
                     int tempG = curr.g + 1;
-                    int tempH = getDistance(currX, currY, maze.length-1, maze.length-1);
+                    int tempH = connectedComponent.get(List.of(currX, currY));
                     int tempF = tempH + tempG;
                     index temp = new index(currX, currY, curr);
                     temp.g = tempG;
@@ -515,7 +474,6 @@ public class Agents {
 
 //  iterates through array of ghosts to move said ghosts
     static void moveGhosts(index[] ghosts, char[][] reference, char[][] maze, double[] distance, int agentX, int agentY){
-        System.out.println("here");
         for (int x = 0; x < ghosts.length; x++){
             index ghost = ghosts[x];
 //          randomly decide if current ghost is going up/down left/right

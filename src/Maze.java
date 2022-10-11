@@ -12,8 +12,8 @@ public class Maze {
         this.visited = visited;
     }
 //  maze generator for when you want dynamic value. because maze is square, only need one input
-    char[][] generateMaze(){
-        char[][] maze = new char[51][51];
+    char[][] generateMaze( int param){
+        char[][] maze = new char[param][param];
         for (int x = 0; x < maze.length; x++){
             for(int y = 0; y < maze[x].length; y++){
 //              rate is [0,1)
@@ -25,7 +25,7 @@ public class Maze {
         visited = verifyMaze(maze);
 //      if maze is not solveable, recursively find one that is
         if (!visited.containsKey(List.of(0, 0)) || visited == null){
-            return generateMaze();
+            return generateMaze(param);
         }
         maze[0][0] = 'S';
         maze[maze.length-1][maze.length-1] = 'T';

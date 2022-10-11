@@ -21,21 +21,23 @@ public class RunAgents extends Thread{
         long endTime;
         long duration;
         for(int iter = 1; iter <= 100; iter++ ) {
-            char[][] m = maze.generateMaze();
+            char[][] m = maze.generateMaze(51);
             if(Agents.agentOne(ghosts, m, maze.visited,0, 0, null)){
                 survivalRatesOne[ghosts] += 1;
             }
-            m = maze.generateMaze();
+            m = maze.generateMaze(51);
+            if(maze.visited.isEmpty())
+                System.out.println("fuck??");
             if(Agents.agentTwo(ghosts, m, maze.visited,0, 0, null)){
                 survivalRatesTwo[ghosts] += 1;
             }
-            m = maze.generateMaze();
+            m = maze.generateMaze(51);
             if(Agents.agentThree(ghosts, m, maze.visited,0, 0, null)){
                 survivalRatesThree[ghosts] += 1;
             }
 //            m = maze.generateMaze();
 //            if(Agents.agentFour(ghosts, m, maze.visited,0, 0, null)){
-//                survivalRatesThree[ghosts] += 1;
+//                survivalRatesFour[ghosts] += 1;
 //            }
 
         }
@@ -61,7 +63,7 @@ public class RunAgents extends Thread{
         List<Thread> threadList = new ArrayList<Thread>();
         Thread t = null;
 //      spawns all threads
-        for (int num = 0; num <= 0; num++) {
+        for (int num = 0; num <= ghosts; num++) {
             t = new RunAgents(num);
             t.start();
             threadList.add(t);
@@ -79,14 +81,14 @@ public class RunAgents extends Thread{
             System.out.println("A2 ghosts #" +  x + ": " +survivalRatesTwo[x]/100);
             System.out.println("A3 ghosts #" +  x + ": " +survivalRatesThree[x]/100);
 //            System.out.println("A4 ghosts #" +  x + ": " +survivalRatesFour[x]/100);
-
-            System.out.println();
+//
+//            System.out.println();
         }
 
     }
 
     public static void main(String args[]) throws InterruptedException {
-        running(100);
+        running(120);
 
 
     }
