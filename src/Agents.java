@@ -311,7 +311,7 @@ public class Agents {
         PriorityQueue<index> ghosts = null;
 //      simulates until either agent is dead or reaches the end of the maze
         while(maze[maze.length-1][maze.length-1] != 'A') {
-            Maze.printMaze(maze);
+//            Maze.printMaze(maze);
 //          stores path
             List<index> path = findPath4(start, end, maze, connectedComponent, ghosts);
 //            only activates when called by agent3
