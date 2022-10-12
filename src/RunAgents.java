@@ -23,7 +23,7 @@ public class RunAgents extends Thread{
         long endTime;
         long duration;
         char[][] m = null;
-        for(int iter = 1; iter <= 2; iter++ ) {
+        for(int iter = 1; iter <= 100; iter++ ) {
             m = maze.generateMaze(51);
 //            if(Agents.agentOne(ghosts, m, maze.visited)){
 //                survivalRatesOne[ghosts] += 1;
@@ -36,7 +36,7 @@ public class RunAgents extends Thread{
 //            if(Agents.agentThree(ghosts, m, maze.visited)){
 //                survivalRatesThree[ghosts] += 1;
 //            }
-            m = maze.generateMaze(5);
+            m = maze.generateMaze(51);
             if(Agents.agentFour(ghosts, m, maze.visited)){
                 survivalRatesFour[ghosts] += 1;
             }
