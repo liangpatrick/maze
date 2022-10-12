@@ -42,7 +42,7 @@ public class RunAgents extends Thread{
 //            }
 //            endTime = System.nanoTime();
 //            duration = (endTime - startTime)/(long)Math.pow(10,9);
-//            System.out.println(iter + "; " + survivalRatesThree[ghosts]+ "; " +duration);
+//            System.out.println(ghosts + "; " + iter + "; " +duration);
         }
         endTime = System.nanoTime();
         duration = (endTime - startTime)/(long)Math.pow(10,9);
@@ -50,7 +50,7 @@ public class RunAgents extends Thread{
         System.out.println("a1 ghosts #" +  ghosts + ": " +survivalRatesOne[ghosts]/100);
         System.out.println("a2 ghosts #" +  ghosts + ": " +survivalRatesTwo[ghosts]/100);
         System.out.println("a3 ghosts #" +  ghosts + ": " +survivalRatesThree[ghosts]/100);
-        System.out.println("a4 ghosts #" +  ghosts + ": " +survivalRatesFour[ghosts]/100);
+//        System.out.println("a4 ghosts #" +  ghosts + ": " +survivalRatesFour[ghosts]/100);
 
 
 

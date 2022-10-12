@@ -213,7 +213,7 @@ public class Agents {
                 if (connectedComponent.containsKey(List.of(currX, currY)) && maze[currX][currY] != '*') {
                     int currUtil = 0;
 //                  simulates agentTwo
-                    for(int count = 0; count < 8; count++){
+                    for(int count = 0; count < 10; count++){
 //                      make duplicate so nothing changes
                         char[][] temp = new char[maze.length][];
                         for (int x = 0; x < maze.length; x++)
@@ -309,7 +309,7 @@ public class Agents {
 //            Maze.printMaze(maze);
             index closestGhost = num == 0 ? null : ghosts[indMin(distance)];
 
-            if(closestGhost != null && closestGhost.distance < 3){
+            if(closestGhost != null && closestGhost.distance < 10){
 //              if no valid move is found, then agent just remains in place
                 int tempStart = start, tempEnd = end;
                 index pos = moveAway(tempStart, tempEnd, start, end, closestGhost, maze, connectedComponent, reference);
@@ -432,6 +432,78 @@ public class Agents {
         return null;
     }
 
+
+
+    static int calcH(){
+
+
+
+
+
+        return -1;
+    }
+    private static List<index> findPath4(int start, int end, char[][] maze, HashMap<List<Integer>, Integer> connectedComponent, char[][] ref){
+//      fringe to store cells that need to be visited
+        PriorityQueue<Agents.index> fringe = new PriorityQueue<>(comparingInt(index::getF));
+        HashMap<List<Integer>, Integer> visited = new HashMap<>();
+//      used to verify if end source has been achieved
+        int endX = maze.length-1, endY = maze[0].length-1;
+//      add beginning cell to fringe and visited; aka open and close
+        fringe.add(new index(start,end, null));
+        visited.put(List.of(start,end), getDistance(start,end, maze.length-1, maze.length-1));
+
+//        System.out.println(connectedComponent.keySet());
+
+        while(!fringe.isEmpty()) {
+//          use poll instead of remove so no errors are thrown
+            index curr = fringe.poll();
+
+//          indX and indY hold current positions, didn't want to keep using curr.x or curr.y for laziness sakes
+            int indX = curr.x, indY = curr.y;
+//          if arrived at destination
+            if (indX == endX && indY == endY) {
+                List<index> path = new ArrayList<>();;
+                getPath(curr, path);
+                return path;
+            }
+
+//          generates neighbors
+            for (int i = 0; i < row.length; i++) {
+                int currX = indX + row[i];
+                int currY = indY + col[i];
+//                bounds check
+
+                if (connectedComponent.containsKey(List.of(currX, currY)) && maze[currX][currY] != '*') {
+//                    to calculate H will need to find closest ghost relative to curr position and move away from it but also biasing down/right
+                    int tempG = curr.g + 1;
+//                    int tempH = connectedComponent.get(List.of(currX, currY));
+                    int tempH = calcH();
+                    int tempF = tempH + tempG;
+
+                    index temp = new index(currX, currY, curr);
+                    temp.g = tempG;
+                    temp.h = tempH;
+                    temp.f = tempF;
+//                    if(fringe.contains(new index ))
+                    if(visited.containsKey(List.of(currX, currY)) ){
+//                        if the previous iteration of the thing has a larger f, get rid of it
+                        if(tempF < visited.get(List.of(currX,currY))){
+                            fringe.remove(temp);
+                        }
+                        else
+                            continue;
+
+                    }
+                    visited.put(List.of(currX, currY),temp.f);
+                    fringe.add(temp);
+                }
+            }
+            visited.put(List.of(indX, indY), curr.f);
+
+        }
+//        System.out.println("No path");
+        return null;
+    }
 
 //  uses recursion to get to the oldest node and then proceeds to add the rest of the nodes to the path list.
     private static void getPath(index node, List<index> path){
