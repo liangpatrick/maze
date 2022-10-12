@@ -325,6 +325,7 @@ public class Agents {
 
                 //          this means ghosts have moved into same cell and the dude is dead
                 if (maze[start][end] != 'A') {
+//                    System.out.println("deadp");
                     return false;
                 }
             } else {
@@ -352,7 +353,7 @@ public class Agents {
                 moveGhosts(ghosts, reference, maze, distance, start, end);
 //              this means ghosts have moved into same cell and the dude is dead
                 if (maze[start][end] != 'A') {
-                    System.out.println("dead");
+//                    System.out.println("dead");
                     return false;
                 }
             }
@@ -448,7 +449,7 @@ public class Agents {
 
 //                  checks if move is valid
             if (connectedComponent.containsKey(List.of(currX, currY)) && maze[currX][currY] != '*') {
-                if(getDistance(closestGhost.x, closestGhost.y, currX, currY) < getDistance(closestGhost.x, closestGhost.y, tempStart, tempEnd)){
+                if(getDistance(closestGhost.x, closestGhost.y, currX, currY) > getDistance(closestGhost.x, closestGhost.y, tempStart, tempEnd)){
                     tempStart = currX;
                     tempEnd = currY;
                 }
@@ -483,11 +484,6 @@ public class Agents {
             arr[x] = new index(g[x].x, g[x].y);
         }
         return arr;
-    }
-//  returns false if is out of bounds, a wall, or is already visited
-    static boolean withinBounds(int x, int y, char[][] maze) {
-        int row = maze.length, col = maze[0].length;
-        return ((0 <= x && x < row) && (0 <= y && y < col));
     }
 //  gets manhattan distance
     static int getDistance(int ghostX, int ghostY, int agentX, int agentY){
