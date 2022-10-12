@@ -27,6 +27,8 @@ public class Maze {
         if (!visited.containsKey(List.of(0, 0)) || visited == null){
             return generateMaze(param);
         }
+//        System.out.println(visited.keySet().toString());
+//        printMaze(maze);
         maze[0][0] = 'S';
         maze[maze.length-1][maze.length-1] = 'T';
         return maze;
@@ -58,7 +60,7 @@ public class Maze {
                 int currX = indX + row[i];
                 int currY = indY + col[i];
 //                checks bounds and if its a wall before adding
-                if (0 <= currX && currX < maze.length && 0 <= currY && currY < maze[x].length && maze[currX][currY] != '#' &&  !visited.containsKey(List.of(currX, currY))){
+                if ((0 <= currX && currX < maze.length) && (0 <= currY && currY < maze[x].length) && maze[currX][currY] != '#' &&  !visited.containsKey(List.of(currX, currY))){
                     fringe.add(new Agents.index(currX, currY, distance+1));
                     visited.put(List.of(currX,currY), distance+1);
                 }
@@ -66,8 +68,6 @@ public class Maze {
 
         }
     }
-
-
 
 //  prints maze for debugging purposes
     static void printMaze(char [][] maze){

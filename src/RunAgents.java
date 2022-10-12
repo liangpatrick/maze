@@ -17,17 +17,19 @@ public class RunAgents extends Thread{
     }
     @Override
     public void run(){
+//        System.out.println("Hello");
         Maze maze = new Maze();
         long startTime = System.nanoTime();
         long endTime;
         long duration;
+        char[][] m = null;
         for(int iter = 1; iter <= 100; iter++ ) {
-            char[][] m = maze.generateMaze(51);
+            m = maze.generateMaze(51);
             if(Agents.agentOne(ghosts, m, maze.visited,0, 0, null)){
                 survivalRatesOne[ghosts] += 1;
             }
             m = maze.generateMaze(51);
-            if(Agents.agentTwo(ghosts, m, maze.visited,0, 0, null)){
+            if(Agents.agentTwo(ghosts, m, maze.visited,0, 0, null, null)){
                 survivalRatesTwo[ghosts] += 1;
             }
             m = maze.generateMaze(51);
@@ -38,7 +40,9 @@ public class RunAgents extends Thread{
 //            if(Agents.agentFour(ghosts, m, maze.visited,0, 0, null)){
 //                survivalRatesFour[ghosts] += 1;
 //            }
-
+//            endTime = System.nanoTime();
+//            duration = (endTime - startTime)/(long)Math.pow(10,9);
+//            System.out.println(iter + "; " + survivalRatesThree[ghosts]+ "; " +duration);
         }
         endTime = System.nanoTime();
         duration = (endTime - startTime)/(long)Math.pow(10,9);
@@ -76,12 +80,12 @@ public class RunAgents extends Thread{
         duration = (endTime - startTime)/(long)Math.pow(10,9);
         System.out.println("Finished Time: " + duration);
         for( int x = 0; x < ghosts; x++) {
-            System.out.println("A1 ghosts #" +  x + ": " +survivalRatesOne[x]/100);
+//            System.out.println("A1 ghosts #" +  x + ": " +survivalRatesOne[x]/100);
             System.out.println("A2 ghosts #" +  x + ": " +survivalRatesTwo[x]/100);
             System.out.println("A3 ghosts #" +  x + ": " +survivalRatesThree[x]/100);
-//            System.out.println("A4 ghosts #" +  x + ": " +survivalRatesFour[x]/100);
-//
-//            System.out.println();
+////            System.out.println("A4 ghosts #" +  x + ": " +survivalRatesFour[x]/100);
+////
+////            System.out.println();
         }
 
     }
