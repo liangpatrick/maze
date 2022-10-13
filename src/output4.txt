@@ -39,3 +39,15 @@ Ghosts #9; Agents Time: 25309
 a1 ghosts #9: 0.58
 a2 ghosts #9: 0.8
 a3 ghosts #9: 0.73
+Ghosts #83; Agents Time: 30263
+a1 ghosts #83: 0.01
+a2 ghosts #83: 0.12
+a3 ghosts #83: 0.0
+Ghosts #10; Agents Time: 31328
+a1 ghosts #10: 0.51
+a2 ghosts #10: 0.75
+a3 ghosts #10: 0.64
+Ghosts #90; Agents Time: 31533
+a1 ghosts #90: 0.0
+a2 ghosts #90: 0.08
+a3 ghosts #90: 0.0
