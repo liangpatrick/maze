@@ -446,7 +446,7 @@ public class Agents {
         if (g == null){
             return 0;
         }
-        int closestDistance = 0;
+        int closestDistance = Integer.MAX_VALUE;
         for(index ghost: g){
             closestDistance = Math.min(getDistance(currX, currY, ghost.x, ghost.y), closestDistance);
         }
