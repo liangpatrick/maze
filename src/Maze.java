@@ -1,7 +1,5 @@
 import java.util.*;
 public class Maze {
-//  maze can now be used without passing in to a method as long as constructor is created
-//    char[][] maze;
 //  use hashmap/hashset for time and space complexity
     HashMap<List<Integer>, Integer> visited;
 //  row, col used for bfs
@@ -27,8 +25,7 @@ public class Maze {
         if (!visited.containsKey(List.of(0, 0)) || visited == null){
             return generateMaze(param);
         }
-//        System.out.println(visited.keySet().toString());
-//        printMaze(maze);
+//        label start and end
         maze[0][0] = 'S';
         maze[maze.length-1][maze.length-1] = 'T';
         return maze;

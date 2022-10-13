@@ -39,3 +39,811 @@ Ghosts #9; Agents Time: 25309
 a1 ghosts #9: 0.58
 a2 ghosts #9: 0.8
 a3 ghosts #9: 0.73
+Ghosts #83; Agents Time: 30263
+a1 ghosts #83: 0.01
+a2 ghosts #83: 0.12
+a3 ghosts #83: 0.0
+Ghosts #10; Agents Time: 31328
+a1 ghosts #10: 0.51
+a2 ghosts #10: 0.75
+a3 ghosts #10: 0.64
+Ghosts #90; Agents Time: 31533
+a1 ghosts #90: 0.0
+a2 ghosts #90: 0.08
+a3 ghosts #90: 0.0
+Ghosts #11; Agents Time: 35659
+a1 ghosts #11: 0.48
+a2 ghosts #11: 0.82
+a3 ghosts #11: 0.59
+Ghosts #56; Agents Time: 36870
+a1 ghosts #56: 0.02
+a2 ghosts #56: 0.27
+a3 ghosts #56: 0.01
+Ghosts #96; Agents Time: 37544
+a1 ghosts #96: 0.0
+a2 ghosts #96: 0.05
+a3 ghosts #96: 0.0
+Ghosts #12; Agents Time: 37783
+a1 ghosts #12: 0.42
+a2 ghosts #12: 0.81
+a3 ghosts #12: 0.5
+Ghosts #14; Agents Time: 37936
+a1 ghosts #14: 0.38
+a2 ghosts #14: 0.76
+a3 ghosts #14: 0.44
+Ghosts #13; Agents Time: 38393
+a1 ghosts #13: 0.38
+a2 ghosts #13: 0.67
+a3 ghosts #13: 0.47
+Ghosts #94; Agents Time: 38470
+a1 ghosts #94: 0.01
+a2 ghosts #94: 0.03
+a3 ghosts #94: 0.0
+Ghosts #79; Agents Time: 39172
+a1 ghosts #79: 0.0
+a2 ghosts #79: 0.08
+a3 ghosts #79: 0.0
+Ghosts #69; Agents Time: 39380
+a1 ghosts #69: 0.0
+a2 ghosts #69: 0.14
+a3 ghosts #69: 0.0
+Ghosts #74; Agents Time: 39394
+a1 ghosts #74: 0.02
+a2 ghosts #74: 0.08
+a3 ghosts #74: 0.0
+Ghosts #66; Agents Time: 40049
+a1 ghosts #66: 0.0
+a2 ghosts #66: 0.15
+a3 ghosts #66: 0.0
+Ghosts #72; Agents Time: 40060
+a1 ghosts #72: 0.02
+a2 ghosts #72: 0.21
+a3 ghosts #72: 0.0
+Ghosts #67; Agents Time: 40162
+a1 ghosts #67: 0.02
+a2 ghosts #67: 0.15
+a3 ghosts #67: 0.0
+Ghosts #50; Agents Time: 40349
+a1 ghosts #50: 0.07
+a2 ghosts #50: 0.31
+a3 ghosts #50: 0.01
+Ghosts #86; Agents Time: 40379
+a1 ghosts #86: 0.0
+a2 ghosts #86: 0.06
+a3 ghosts #86: 0.0
+Ghosts #15; Agents Time: 40459
+a1 ghosts #15: 0.39
+a2 ghosts #15: 0.69
+a3 ghosts #15: 0.4
+Ghosts #82; Agents Time: 40548
+a1 ghosts #82: 0.0
+a2 ghosts #82: 0.06
+a3 ghosts #82: 0.0
+Ghosts #17; Agents Time: 40735
+a1 ghosts #17: 0.3
+a2 ghosts #17: 0.69
+a3 ghosts #17: 0.47
+Ghosts #98; Agents Time: 40770
+a1 ghosts #98: 0.0
+a2 ghosts #98: 0.06
+a3 ghosts #98: 0.0
+Ghosts #91; Agents Time: 41080
+a1 ghosts #91: 0.0
+a2 ghosts #91: 0.09
+a3 ghosts #91: 0.0
+Ghosts #63; Agents Time: 41159
+a1 ghosts #63: 0.01
+a2 ghosts #63: 0.26
+a3 ghosts #63: 0.0
+Ghosts #77; Agents Time: 41504
+a1 ghosts #77: 0.02
+a2 ghosts #77: 0.16
+a3 ghosts #77: 0.0
+Ghosts #53; Agents Time: 41636
+a1 ghosts #53: 0.02
+a2 ghosts #53: 0.29
+a3 ghosts #53: 0.01
+Ghosts #20; Agents Time: 41993
+a1 ghosts #20: 0.38
+a2 ghosts #20: 0.57
+a3 ghosts #20: 0.26
+Ghosts #75; Agents Time: 42001
+a1 ghosts #75: 0.01
+a2 ghosts #75: 0.16
+a3 ghosts #75: 0.0
+Ghosts #95; Agents Time: 42186
+a1 ghosts #95: 0.0
+a2 ghosts #95: 0.08
+a3 ghosts #95: 0.0
+Ghosts #80; Agents Time: 42254
+a1 ghosts #80: 0.01
+a2 ghosts #80: 0.12
+a3 ghosts #80: 0.0
+Ghosts #71; Agents Time: 42605
+a1 ghosts #71: 0.01
+a2 ghosts #71: 0.19
+a3 ghosts #71: 0.0
+Ghosts #88; Agents Time: 42732
+a1 ghosts #88: 0.0
+a2 ghosts #88: 0.05
+a3 ghosts #88: 0.0
+Ghosts #70; Agents Time: 42827
+a1 ghosts #70: 0.02
+a2 ghosts #70: 0.06
+a3 ghosts #70: 0.0
+Ghosts #36; Agents Time: 42875
+a1 ghosts #36: 0.09
+a2 ghosts #36: 0.46
+a3 ghosts #36: 0.03
+Ghosts #16; Agents Time: 43081
+a1 ghosts #16: 0.42
+a2 ghosts #16: 0.59
+a3 ghosts #16: 0.32
+Ghosts #41; Agents Time: 43371
+a1 ghosts #41: 0.09
+a2 ghosts #41: 0.36
+a3 ghosts #41: 0.04
+Ghosts #81; Agents Time: 43428
+a1 ghosts #81: 0.01
+a2 ghosts #81: 0.17
+a3 ghosts #81: 0.0
+Ghosts #38; Agents Time: 43944
+a1 ghosts #38: 0.09
+a2 ghosts #38: 0.41
+a3 ghosts #38: 0.04
+Ghosts #73; Agents Time: 44055
+a1 ghosts #73: 0.01
+a2 ghosts #73: 0.16
+a3 ghosts #73: 0.0
+Ghosts #39; Agents Time: 44070
+a1 ghosts #39: 0.14
+a2 ghosts #39: 0.32
+a3 ghosts #39: 0.03
+Ghosts #31; Agents Time: 44112
+a1 ghosts #31: 0.1
+a2 ghosts #31: 0.48
+a3 ghosts #31: 0.08
+Ghosts #84; Agents Time: 44263
+a1 ghosts #84: 0.0
+a2 ghosts #84: 0.11
+a3 ghosts #84: 0.0
+Ghosts #58; Agents Time: 44554
+a1 ghosts #58: 0.02
+a2 ghosts #58: 0.24
+a3 ghosts #58: 0.0
+Ghosts #101; Agents Time: 45065
+a1 ghosts #101: 0.0
+a2 ghosts #101: 0.04
+a3 ghosts #101: 0.0
+Ghosts #34; Agents Time: 45402
+a1 ghosts #34: 0.11
+a2 ghosts #34: 0.52
+a3 ghosts #34: 0.09
+Ghosts #61; Agents Time: 45405
+a1 ghosts #61: 0.03
+a2 ghosts #61: 0.11
+a3 ghosts #61: 0.0
+Ghosts #51; Agents Time: 45440
+a1 ghosts #51: 0.05
+a2 ghosts #51: 0.26
+a3 ghosts #51: 0.01
+Ghosts #68; Agents Time: 45500
+a1 ghosts #68: 0.02
+a2 ghosts #68: 0.21
+a3 ghosts #68: 0.0
+Ghosts #65; Agents Time: 45582
+a1 ghosts #65: 0.01
+a2 ghosts #65: 0.16
+a3 ghosts #65: 0.0
+Ghosts #35; Agents Time: 45681
+a1 ghosts #35: 0.07
+a2 ghosts #35: 0.44
+a3 ghosts #35: 0.07
+Ghosts #110; Agents Time: 45868
+a1 ghosts #110: 0.0
+a2 ghosts #110: 0.03
+a3 ghosts #110: 0.0
+Ghosts #18; Agents Time: 45874
+a1 ghosts #18: 0.35
+a2 ghosts #18: 0.68
+a3 ghosts #18: 0.26
+Ghosts #93; Agents Time: 46111
+a1 ghosts #93: 0.01
+a2 ghosts #93: 0.06
+a3 ghosts #93: 0.0
+Ghosts #105; Agents Time: 46112
+a1 ghosts #105: 0.0
+a2 ghosts #105: 0.02
+a3 ghosts #105: 0.0
+Ghosts #21; Agents Time: 46347
+a1 ghosts #21: 0.25
+a2 ghosts #21: 0.59
+a3 ghosts #21: 0.28
+Ghosts #62; Agents Time: 46363
+a1 ghosts #62: 0.0
+a2 ghosts #62: 0.17
+a3 ghosts #62: 0.0
+Ghosts #19; Agents Time: 46384
+a1 ghosts #19: 0.34
+a2 ghosts #19: 0.71
+a3 ghosts #19: 0.3
+Ghosts #48; Agents Time: 46476
+a1 ghosts #48: 0.05
+a2 ghosts #48: 0.32
+a3 ghosts #48: 0.0
+Ghosts #30; Agents Time: 46502
+a1 ghosts #30: 0.17
+a2 ghosts #30: 0.45
+a3 ghosts #30: 0.07
+Ghosts #25; Agents Time: 46522
+a1 ghosts #25: 0.18
+a2 ghosts #25: 0.59
+a3 ghosts #25: 0.13
+Ghosts #103; Agents Time: 46553
+a1 ghosts #103: 0.0
+a2 ghosts #103: 0.06
+a3 ghosts #103: 0.0
+Ghosts #78; Agents Time: 46617
+a1 ghosts #78: 0.02
+a2 ghosts #78: 0.05
+a3 ghosts #78: 0.0
+Ghosts #76; Agents Time: 46706
+a1 ghosts #76: 0.01
+a2 ghosts #76: 0.16
+a3 ghosts #76: 0.0
+Ghosts #97; Agents Time: 46759
+a1 ghosts #97: 0.01
+a2 ghosts #97: 0.08
+a3 ghosts #97: 0.0
+Ghosts #22; Agents Time: 46786
+a1 ghosts #22: 0.24
+a2 ghosts #22: 0.55
+a3 ghosts #22: 0.2
+Ghosts #32; Agents Time: 46786
+a1 ghosts #32: 0.12
+a2 ghosts #32: 0.54
+a3 ghosts #32: 0.02
+Ghosts #49; Agents Time: 46811
+a1 ghosts #49: 0.03
+a2 ghosts #49: 0.3
+a3 ghosts #49: 0.02
+Ghosts #27; Agents Time: 46920
+a1 ghosts #27: 0.21
+a2 ghosts #27: 0.55
+a3 ghosts #27: 0.18
+Ghosts #23; Agents Time: 46935
+a1 ghosts #23: 0.26
+a2 ghosts #23: 0.53
+a3 ghosts #23: 0.14
+Ghosts #43; Agents Time: 46992
+a1 ghosts #43: 0.09
+a2 ghosts #43: 0.32
+a3 ghosts #43: 0.0
+Ghosts #64; Agents Time: 47057
+a1 ghosts #64: 0.04
+a2 ghosts #64: 0.2
+a3 ghosts #64: 0.0
+Ghosts #102; Agents Time: 47074
+a1 ghosts #102: 0.0
+a2 ghosts #102: 0.04
+a3 ghosts #102: 0.0
+Ghosts #59; Agents Time: 47254
+a1 ghosts #59: 0.03
+a2 ghosts #59: 0.16
+a3 ghosts #59: 0.0
+Ghosts #85; Agents Time: 47308
+a1 ghosts #85: 0.0
+a2 ghosts #85: 0.1
+a3 ghosts #85: 0.01
+Ghosts #60; Agents Time: 47316
+a1 ghosts #60: 0.02
+a2 ghosts #60: 0.16
+a3 ghosts #60: 0.01
+Ghosts #99; Agents Time: 47389
+a1 ghosts #99: 0.0
+a2 ghosts #99: 0.03
+a3 ghosts #99: 0.0
+Ghosts #54; Agents Time: 47561
+a1 ghosts #54: 0.05
+a2 ghosts #54: 0.26
+a3 ghosts #54: 0.01
+Ghosts #46; Agents Time: 47699
+a1 ghosts #46: 0.09
+a2 ghosts #46: 0.31
+a3 ghosts #46: 0.04
+Ghosts #37; Agents Time: 47782
+a1 ghosts #37: 0.1
+a2 ghosts #37: 0.44
+a3 ghosts #37: 0.04
+Ghosts #42; Agents Time: 47845
+a1 ghosts #42: 0.09
+a2 ghosts #42: 0.29
+a3 ghosts #42: 0.02
+Ghosts #24; Agents Time: 47893
+a1 ghosts #24: 0.22
+a2 ghosts #24: 0.6
+a3 ghosts #24: 0.16
+Ghosts #52; Agents Time: 47902
+a1 ghosts #52: 0.02
+a2 ghosts #52: 0.29
+a3 ghosts #52: 0.02
+Ghosts #47; Agents Time: 47929
+a1 ghosts #47: 0.02
+a2 ghosts #47: 0.3
+a3 ghosts #47: 0.02
+Ghosts #89; Agents Time: 47983
+a1 ghosts #89: 0.0
+a2 ghosts #89: 0.03
+a3 ghosts #89: 0.0
+Ghosts #33; Agents Time: 48230
+a1 ghosts #33: 0.11
+a2 ghosts #33: 0.48
+a3 ghosts #33: 0.07
+Ghosts #45; Agents Time: 48302
+a1 ghosts #45: 0.07
+a2 ghosts #45: 0.3
+a3 ghosts #45: 0.0
+Ghosts #113; Agents Time: 48409
+a1 ghosts #113: 0.0
+a2 ghosts #113: 0.03
+a3 ghosts #113: 0.0
+Ghosts #26; Agents Time: 48466
+a1 ghosts #26: 0.21
+a2 ghosts #26: 0.51
+a3 ghosts #26: 0.12
+Ghosts #57; Agents Time: 48531
+a1 ghosts #57: 0.01
+a2 ghosts #57: 0.25
+a3 ghosts #57: 0.01
+Ghosts #55; Agents Time: 48600
+a1 ghosts #55: 0.02
+a2 ghosts #55: 0.24
+a3 ghosts #55: 0.01
+Ghosts #28; Agents Time: 48689
+a1 ghosts #28: 0.16
+a2 ghosts #28: 0.48
+a3 ghosts #28: 0.1
+Ghosts #29; Agents Time: 48701
+a1 ghosts #29: 0.16
+a2 ghosts #29: 0.46
+a3 ghosts #29: 0.11
+Ghosts #92; Agents Time: 48710
+a1 ghosts #92: 0.0
+a2 ghosts #92: 0.07
+a3 ghosts #92: 0.0
+Ghosts #106; Agents Time: 48728
+a1 ghosts #106: 0.0
+a2 ghosts #106: 0.04
+a3 ghosts #106: 0.0
+Ghosts #117; Agents Time: 48971
+a1 ghosts #117: 0.0
+a2 ghosts #117: 0.02
+a3 ghosts #117: 0.0
+Ghosts #87; Agents Time: 49069
+a1 ghosts #87: 0.0
+a2 ghosts #87: 0.09
+a3 ghosts #87: 0.0
+Ghosts #107; Agents Time: 49072
+a1 ghosts #107: 0.01
+a2 ghosts #107: 0.03
+a3 ghosts #107: 0.0
+Ghosts #108; Agents Time: 49116
+a1 ghosts #108: 0.0
+a2 ghosts #108: 0.05
+a3 ghosts #108: 0.0
+Ghosts #40; Agents Time: 49334
+a1 ghosts #40: 0.07
+a2 ghosts #40: 0.36
+a3 ghosts #40: 0.05
+Ghosts #44; Agents Time: 49436
+a1 ghosts #44: 0.04
+a2 ghosts #44: 0.35
+a3 ghosts #44: 0.05
+Ghosts #100; Agents Time: 49485
+a1 ghosts #100: 0.0
+a2 ghosts #100: 0.01
+a3 ghosts #100: 0.0
+Ghosts #116; Agents Time: 49515
+a1 ghosts #116: 0.0
+a2 ghosts #116: 0.06
+a3 ghosts #116: 0.0
+Ghosts #111; Agents Time: 50190
+a1 ghosts #111: 0.0
+a2 ghosts #111: 0.06
+a3 ghosts #111: 0.0
+Ghosts #112; Agents Time: 50389
+a1 ghosts #112: 0.0
+a2 ghosts #112: 0.03
+a3 ghosts #112: 0.0
+Ghosts #119; Agents Time: 50639
+a1 ghosts #119: 0.0
+a2 ghosts #119: 0.01
+a3 ghosts #119: 0.0
+Ghosts #118; Agents Time: 51062
+a1 ghosts #118: 0.0
+a2 ghosts #118: 0.01
+a3 ghosts #118: 0.0
+Ghosts #109; Agents Time: 51573
+a1 ghosts #109: 0.0
+a2 ghosts #109: 0.06
+a3 ghosts #109: 0.0
+Ghosts #120; Agents Time: 51584
+a1 ghosts #120: 0.0
+a2 ghosts #120: 0.01
+a3 ghosts #120: 0.0
+Ghosts #114; Agents Time: 51961
+a1 ghosts #114: 0.0
+a2 ghosts #114: 0.02
+a3 ghosts #114: 0.0
+Ghosts #115; Agents Time: 53057
+a1 ghosts #115: 0.0
+a2 ghosts #115: 0.03
+a3 ghosts #115: 0.0
+Ghosts #104; Agents Time: 53390
+a1 ghosts #104: 0.0
+a2 ghosts #104: 0.07
+a3 ghosts #104: 0.0
+Finished Time: 53391
+A1 ghosts #0: 1.0
+A2 ghosts #0: 1.0
+A3 ghosts #0: 1.0
+A1 ghosts #1: 0.96
+A2 ghosts #1: 0.97
+A3 ghosts #1: 0.96
+A1 ghosts #2: 0.93
+A2 ghosts #2: 0.95
+A3 ghosts #2: 0.96
+A1 ghosts #3: 0.89
+A2 ghosts #3: 0.93
+A3 ghosts #3: 0.93
+A1 ghosts #4: 0.77
+A2 ghosts #4: 0.83
+A3 ghosts #4: 0.85
+A1 ghosts #5: 0.74
+A2 ghosts #5: 0.9
+A3 ghosts #5: 0.77
+A1 ghosts #6: 0.78
+A2 ghosts #6: 0.84
+A3 ghosts #6: 0.8
+A1 ghosts #7: 0.61
+A2 ghosts #7: 0.86
+A3 ghosts #7: 0.74
+A1 ghosts #8: 0.69
+A2 ghosts #8: 0.83
+A3 ghosts #8: 0.78
+A1 ghosts #9: 0.58
+A2 ghosts #9: 0.8
+A3 ghosts #9: 0.73
+A1 ghosts #10: 0.51
+A2 ghosts #10: 0.75
+A3 ghosts #10: 0.64
+A1 ghosts #11: 0.48
+A2 ghosts #11: 0.82
+A3 ghosts #11: 0.59
+A1 ghosts #12: 0.42
+A2 ghosts #12: 0.81
+A3 ghosts #12: 0.5
+A1 ghosts #13: 0.38
+A2 ghosts #13: 0.67
+A3 ghosts #13: 0.47
+A1 ghosts #14: 0.38
+A2 ghosts #14: 0.76
+A3 ghosts #14: 0.44
+A1 ghosts #15: 0.39
+A2 ghosts #15: 0.69
+A3 ghosts #15: 0.4
+A1 ghosts #16: 0.42
+A2 ghosts #16: 0.59
+A3 ghosts #16: 0.32
+A1 ghosts #17: 0.3
+A2 ghosts #17: 0.69
+A3 ghosts #17: 0.47
+A1 ghosts #18: 0.35
+A2 ghosts #18: 0.68
+A3 ghosts #18: 0.26
+A1 ghosts #19: 0.34
+A2 ghosts #19: 0.71
+A3 ghosts #19: 0.3
+A1 ghosts #20: 0.38
+A2 ghosts #20: 0.57
+A3 ghosts #20: 0.26
+A1 ghosts #21: 0.25
+A2 ghosts #21: 0.59
+A3 ghosts #21: 0.28
+A1 ghosts #22: 0.24
+A2 ghosts #22: 0.55
+A3 ghosts #22: 0.2
+A1 ghosts #23: 0.26
+A2 ghosts #23: 0.53
+A3 ghosts #23: 0.14
+A1 ghosts #24: 0.22
+A2 ghosts #24: 0.6
+A3 ghosts #24: 0.16
+A1 ghosts #25: 0.18
+A2 ghosts #25: 0.59
+A3 ghosts #25: 0.13
+A1 ghosts #26: 0.21
+A2 ghosts #26: 0.51
+A3 ghosts #26: 0.12
+A1 ghosts #27: 0.21
+A2 ghosts #27: 0.55
+A3 ghosts #27: 0.18
+A1 ghosts #28: 0.16
+A2 ghosts #28: 0.48
+A3 ghosts #28: 0.1
+A1 ghosts #29: 0.16
+A2 ghosts #29: 0.46
+A3 ghosts #29: 0.11
+A1 ghosts #30: 0.17
+A2 ghosts #30: 0.45
+A3 ghosts #30: 0.07
+A1 ghosts #31: 0.1
+A2 ghosts #31: 0.48
+A3 ghosts #31: 0.08
+A1 ghosts #32: 0.12
+A2 ghosts #32: 0.54
+A3 ghosts #32: 0.02
+A1 ghosts #33: 0.11
+A2 ghosts #33: 0.48
+A3 ghosts #33: 0.07
+A1 ghosts #34: 0.11
+A2 ghosts #34: 0.52
+A3 ghosts #34: 0.09
+A1 ghosts #35: 0.07
+A2 ghosts #35: 0.44
+A3 ghosts #35: 0.07
+A1 ghosts #36: 0.09
+A2 ghosts #36: 0.46
+A3 ghosts #36: 0.03
+A1 ghosts #37: 0.1
+A2 ghosts #37: 0.44
+A3 ghosts #37: 0.04
+A1 ghosts #38: 0.09
+A2 ghosts #38: 0.41
+A3 ghosts #38: 0.04
+A1 ghosts #39: 0.14
+A2 ghosts #39: 0.32
+A3 ghosts #39: 0.03
+A1 ghosts #40: 0.07
+A2 ghosts #40: 0.36
+A3 ghosts #40: 0.05
+A1 ghosts #41: 0.09
+A2 ghosts #41: 0.36
+A3 ghosts #41: 0.04
+A1 ghosts #42: 0.09
+A2 ghosts #42: 0.29
+A3 ghosts #42: 0.02
+A1 ghosts #43: 0.09
+A2 ghosts #43: 0.32
+A3 ghosts #43: 0.0
+A1 ghosts #44: 0.04
+A2 ghosts #44: 0.35
+A3 ghosts #44: 0.05
+A1 ghosts #45: 0.07
+A2 ghosts #45: 0.3
+A3 ghosts #45: 0.0
+A1 ghosts #46: 0.09
+A2 ghosts #46: 0.31
+A3 ghosts #46: 0.04
+A1 ghosts #47: 0.02
+A2 ghosts #47: 0.3
+A3 ghosts #47: 0.02
+A1 ghosts #48: 0.05
+A2 ghosts #48: 0.32
+A3 ghosts #48: 0.0
+A1 ghosts #49: 0.03
+A2 ghosts #49: 0.3
+A3 ghosts #49: 0.02
+A1 ghosts #50: 0.07
+A2 ghosts #50: 0.31
+A3 ghosts #50: 0.01
+A1 ghosts #51: 0.05
+A2 ghosts #51: 0.26
+A3 ghosts #51: 0.01
+A1 ghosts #52: 0.02
+A2 ghosts #52: 0.29
+A3 ghosts #52: 0.02
+A1 ghosts #53: 0.02
+A2 ghosts #53: 0.29
+A3 ghosts #53: 0.01
+A1 ghosts #54: 0.05
+A2 ghosts #54: 0.26
+A3 ghosts #54: 0.01
+A1 ghosts #55: 0.02
+A2 ghosts #55: 0.24
+A3 ghosts #55: 0.01
+A1 ghosts #56: 0.02
+A2 ghosts #56: 0.27
+A3 ghosts #56: 0.01
+A1 ghosts #57: 0.01
+A2 ghosts #57: 0.25
+A3 ghosts #57: 0.01
+A1 ghosts #58: 0.02
+A2 ghosts #58: 0.24
+A3 ghosts #58: 0.0
+A1 ghosts #59: 0.03
+A2 ghosts #59: 0.16
+A3 ghosts #59: 0.0
+A1 ghosts #60: 0.02
+A2 ghosts #60: 0.16
+A3 ghosts #60: 0.01
+A1 ghosts #61: 0.03
+A2 ghosts #61: 0.11
+A3 ghosts #61: 0.0
+A1 ghosts #62: 0.0
+A2 ghosts #62: 0.17
+A3 ghosts #62: 0.0
+A1 ghosts #63: 0.01
+A2 ghosts #63: 0.26
+A3 ghosts #63: 0.0
+A1 ghosts #64: 0.04
+A2 ghosts #64: 0.2
+A3 ghosts #64: 0.0
+A1 ghosts #65: 0.01
+A2 ghosts #65: 0.16
+A3 ghosts #65: 0.0
+A1 ghosts #66: 0.0
+A2 ghosts #66: 0.15
+A3 ghosts #66: 0.0
+A1 ghosts #67: 0.02
+A2 ghosts #67: 0.15
+A3 ghosts #67: 0.0
+A1 ghosts #68: 0.02
+A2 ghosts #68: 0.21
+A3 ghosts #68: 0.0
+A1 ghosts #69: 0.0
+A2 ghosts #69: 0.14
+A3 ghosts #69: 0.0
+A1 ghosts #70: 0.02
+A2 ghosts #70: 0.06
+A3 ghosts #70: 0.0
+A1 ghosts #71: 0.01
+A2 ghosts #71: 0.19
+A3 ghosts #71: 0.0
+A1 ghosts #72: 0.02
+A2 ghosts #72: 0.21
+A3 ghosts #72: 0.0
+A1 ghosts #73: 0.01
+A2 ghosts #73: 0.16
+A3 ghosts #73: 0.0
+A1 ghosts #74: 0.02
+A2 ghosts #74: 0.08
+A3 ghosts #74: 0.0
+A1 ghosts #75: 0.01
+A2 ghosts #75: 0.16
+A3 ghosts #75: 0.0
+A1 ghosts #76: 0.01
+A2 ghosts #76: 0.16
+A3 ghosts #76: 0.0
+A1 ghosts #77: 0.02
+A2 ghosts #77: 0.16
+A3 ghosts #77: 0.0
+A1 ghosts #78: 0.02
+A2 ghosts #78: 0.05
+A3 ghosts #78: 0.0
+A1 ghosts #79: 0.0
+A2 ghosts #79: 0.08
+A3 ghosts #79: 0.0
+A1 ghosts #80: 0.01
+A2 ghosts #80: 0.12
+A3 ghosts #80: 0.0
+A1 ghosts #81: 0.01
+A2 ghosts #81: 0.17
+A3 ghosts #81: 0.0
+A1 ghosts #82: 0.0
+A2 ghosts #82: 0.06
+A3 ghosts #82: 0.0
+A1 ghosts #83: 0.01
+A2 ghosts #83: 0.12
+A3 ghosts #83: 0.0
+A1 ghosts #84: 0.0
+A2 ghosts #84: 0.11
+A3 ghosts #84: 0.0
+A1 ghosts #85: 0.0
+A2 ghosts #85: 0.1
+A3 ghosts #85: 0.01
+A1 ghosts #86: 0.0
+A2 ghosts #86: 0.06
+A3 ghosts #86: 0.0
+A1 ghosts #87: 0.0
+A2 ghosts #87: 0.09
+A3 ghosts #87: 0.0
+A1 ghosts #88: 0.0
+A2 ghosts #88: 0.05
+A3 ghosts #88: 0.0
+A1 ghosts #89: 0.0
+A2 ghosts #89: 0.03
+A3 ghosts #89: 0.0
+A1 ghosts #90: 0.0
+A2 ghosts #90: 0.08
+A3 ghosts #90: 0.0
+A1 ghosts #91: 0.0
+A2 ghosts #91: 0.09
+A3 ghosts #91: 0.0
+A1 ghosts #92: 0.0
+A2 ghosts #92: 0.07
+A3 ghosts #92: 0.0
+A1 ghosts #93: 0.01
+A2 ghosts #93: 0.06
+A3 ghosts #93: 0.0
+A1 ghosts #94: 0.01
+A2 ghosts #94: 0.03
+A3 ghosts #94: 0.0
+A1 ghosts #95: 0.0
+A2 ghosts #95: 0.08
+A3 ghosts #95: 0.0
+A1 ghosts #96: 0.0
+A2 ghosts #96: 0.05
+A3 ghosts #96: 0.0
+A1 ghosts #97: 0.01
+A2 ghosts #97: 0.08
+A3 ghosts #97: 0.0
+A1 ghosts #98: 0.0
+A2 ghosts #98: 0.06
+A3 ghosts #98: 0.0
+A1 ghosts #99: 0.0
+A2 ghosts #99: 0.03
+A3 ghosts #99: 0.0
+A1 ghosts #100: 0.0
+A2 ghosts #100: 0.01
+A3 ghosts #100: 0.0
+A1 ghosts #101: 0.0
+A2 ghosts #101: 0.04
+A3 ghosts #101: 0.0
+A1 ghosts #102: 0.0
+A2 ghosts #102: 0.04
+A3 ghosts #102: 0.0
+A1 ghosts #103: 0.0
+A2 ghosts #103: 0.06
+A3 ghosts #103: 0.0
+A1 ghosts #104: 0.0
+A2 ghosts #104: 0.07
+A3 ghosts #104: 0.0
+A1 ghosts #105: 0.0
+A2 ghosts #105: 0.02
+A3 ghosts #105: 0.0
+A1 ghosts #106: 0.0
+A2 ghosts #106: 0.04
+A3 ghosts #106: 0.0
+A1 ghosts #107: 0.01
+A2 ghosts #107: 0.03
+A3 ghosts #107: 0.0
+A1 ghosts #108: 0.0
+A2 ghosts #108: 0.05
+A3 ghosts #108: 0.0
+A1 ghosts #109: 0.0
+A2 ghosts #109: 0.06
+A3 ghosts #109: 0.0
+A1 ghosts #110: 0.0
+A2 ghosts #110: 0.03
+A3 ghosts #110: 0.0
+A1 ghosts #111: 0.0
+A2 ghosts #111: 0.06
+A3 ghosts #111: 0.0
+A1 ghosts #112: 0.0
+A2 ghosts #112: 0.03
+A3 ghosts #112: 0.0
+A1 ghosts #113: 0.0
+A2 ghosts #113: 0.03
+A3 ghosts #113: 0.0
+A1 ghosts #114: 0.0
+A2 ghosts #114: 0.02
+A3 ghosts #114: 0.0
+A1 ghosts #115: 0.0
+A2 ghosts #115: 0.03
+A3 ghosts #115: 0.0
+A1 ghosts #116: 0.0
+A2 ghosts #116: 0.06
+A3 ghosts #116: 0.0
+A1 ghosts #117: 0.0
+A2 ghosts #117: 0.02
+A3 ghosts #117: 0.0
+A1 ghosts #118: 0.0
+A2 ghosts #118: 0.01
+A3 ghosts #118: 0.0
+A1 ghosts #119: 0.0
+A2 ghosts #119: 0.01
+A3 ghosts #119: 0.0
+A1 ghosts #120: 0.0
+A2 ghosts #120: 0.01
+A3 ghosts #120: 0.0
