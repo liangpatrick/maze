@@ -221,7 +221,7 @@ public class Agents {
                 if (connectedComponent.containsKey(List.of(currX, currY)) && maze[currX][currY] != '*') {
                     int currUtil = 0;
 //                  simulates agentTwo
-                    for(int count = 0; count < 10; count++){
+                    for(int count = 0; count < 20; count++){
 //                      make duplicate so nothing changes
                         char[][] temp = new char[maze.length][];
                         for (int x = 0; x < maze.length; x++)
