@@ -115,6 +115,7 @@ public class Agents {
 //      array of index objects that store ghost positions so i can both accurately move them and keep track in case there is overlap
         PriorityQueue<index> ghosts = null;
         if (ghost != null){
+
             ghosts = copyGhosts(ghost);
         }
 
@@ -450,10 +451,7 @@ public class Agents {
             closestDistance = Math.min(getDistance(currX, currY, ghost.x, ghost.y), closestDistance);
         }
 
-
-
-
-        return closestDistance;
+        return -closestDistance;
     }
     private static List<index> findPath4(int start, int end, char[][] maze, HashMap<List<Integer>, Integer> connectedComponent, PriorityQueue<index> g){
 //      fringe to store cells that need to be visited
