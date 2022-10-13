@@ -224,14 +224,14 @@ public class Agents {
                             bigUtil = currUtil;
 
                         }
-                        else if (connectedComponent.get(List.of(currX, currY)) == connectedComponent.get(List.of(newX, newY))){
-//                            biased towards down/right
-                            if (currX > newX || currY > newY){
-                                newX = currX;
-                                newY = currY;
-                                bigUtil = currUtil;
-                            }
-                        }
+//                        else if (connectedComponent.get(List.of(currX, currY)) == connectedComponent.get(List.of(newX, newY))){
+////                            biased towards down/right
+//                            if (currX > newX || currY > newY){
+//                                newX = currX;
+//                                newY = currY;
+//                                bigUtil = currUtil;
+//                            }
+//                        }
                     }
 
                 }

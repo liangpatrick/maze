@@ -45,9 +45,9 @@ public class RunAgents extends Thread{
 //            if(Agents.agentFive(ghosts, m, maze.visited)){
 //                survivalRatesFive[ghosts] += 1;
 //            }
-//            endTime = System.nanoTime();
-//            duration = (endTime - startTime)/(long)Math.pow(10,9);
-//            System.out.println(ghosts + "; " + iter + "; " +duration);
+            endTime = System.nanoTime();
+            duration = (endTime - startTime)/(long)Math.pow(10,9);
+            System.out.println(ghosts + "; " + iter + "; " +duration);
         }
         endTime = System.nanoTime();
         duration = (endTime - startTime)/(long)Math.pow(10,9);
