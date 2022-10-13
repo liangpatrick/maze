@@ -1,0 +1,41 @@
+waiting
+Ghosts #0; Agents Time: 2874
+a1 ghosts #0: 1.0
+a2 ghosts #0: 1.0
+a3 ghosts #0: 1.0
+Ghosts #1; Agents Time: 4634
+a1 ghosts #1: 0.96
+a2 ghosts #1: 0.97
+a3 ghosts #1: 0.96
+Ghosts #2; Agents Time: 7160
+a1 ghosts #2: 0.93
+a2 ghosts #2: 0.95
+a3 ghosts #2: 0.96
+Ghosts #3; Agents Time: 9641
+a1 ghosts #3: 0.89
+a2 ghosts #3: 0.93
+a3 ghosts #3: 0.93
+Ghosts #4; Agents Time: 11709
+a1 ghosts #4: 0.77
+a2 ghosts #4: 0.83
+a3 ghosts #4: 0.85
+Ghosts #5; Agents Time: 14322
+a1 ghosts #5: 0.74
+a2 ghosts #5: 0.9
+a3 ghosts #5: 0.77
+Ghosts #6; Agents Time: 15317
+a1 ghosts #6: 0.78
+a2 ghosts #6: 0.84
+a3 ghosts #6: 0.8
+Ghosts #7; Agents Time: 22304
+a1 ghosts #7: 0.61
+a2 ghosts #7: 0.86
+a3 ghosts #7: 0.74
+Ghosts #8; Agents Time: 25241
+a1 ghosts #8: 0.69
+a2 ghosts #8: 0.83
+a3 ghosts #8: 0.78
+Ghosts #9; Agents Time: 25309
+a1 ghosts #9: 0.58
+a2 ghosts #9: 0.8
+a3 ghosts #9: 0.73
