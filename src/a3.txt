@@ -1,0 +1,173 @@
+waiting
+Ghosts #100; Agents Time: 2752
+a3 ghosts #100: 0.0
+Ghosts #98; Agents Time: 2840
+a3 ghosts #98: 0.0
+Ghosts #96; Agents Time: 2949
+a3 ghosts #96: 0.0
+Ghosts #90; Agents Time: 2960
+a3 ghosts #90: 0.0
+Ghosts #97; Agents Time: 3047
+a3 ghosts #97: 0.0
+Ghosts #95; Agents Time: 3231
+a3 ghosts #95: 0.0
+Ghosts #94; Agents Time: 3341
+a3 ghosts #94: 0.0
+Ghosts #99; Agents Time: 3448
+a3 ghosts #99: 0.0
+Ghosts #87; Agents Time: 3515
+a3 ghosts #87: 0.0
+Ghosts #93; Agents Time: 3524
+a3 ghosts #93: 0.0
+Ghosts #89; Agents Time: 3623
+a3 ghosts #89: 0.0
+Ghosts #85; Agents Time: 3691
+a3 ghosts #85: 0.0
+Ghosts #91; Agents Time: 3798
+a3 ghosts #91: 0.0
+Ghosts #82; Agents Time: 3868
+a3 ghosts #82: 0.0
+Ghosts #83; Agents Time: 3880
+a3 ghosts #83: 0.0
+Ghosts #88; Agents Time: 3979
+a3 ghosts #88: 0.0
+Ghosts #92; Agents Time: 4012
+a3 ghosts #92: 0.0
+Ghosts #77; Agents Time: 4019
+a3 ghosts #77: 0.0
+Ghosts #79; Agents Time: 4129
+a3 ghosts #79: 0.0
+Ghosts #76; Agents Time: 4398
+a3 ghosts #76: 0.0
+Ghosts #81; Agents Time: 4400
+a3 ghosts #81: 0.0
+Ghosts #86; Agents Time: 4605
+a3 ghosts #86: 0.0
+Ghosts #80; Agents Time: 4608
+a3 ghosts #80: 0.0
+Ghosts #70; Agents Time: 4879
+a3 ghosts #70: 0.0
+Ghosts #74; Agents Time: 4885
+a3 ghosts #74: 0.0
+Ghosts #78; Agents Time: 4918
+a3 ghosts #78: 0.0
+Ghosts #84; Agents Time: 4919
+a3 ghosts #84: 0.0
+Ghosts #73; Agents Time: 5106
+a3 ghosts #73: 0.0
+Ghosts #71; Agents Time: 5108
+a3 ghosts #71: 0.0
+Ghosts #75; Agents Time: 5181
+a3 ghosts #75: 0.0
+Ghosts #72; Agents Time: 5229
+a3 ghosts #72: 0.0
+Ghosts #67; Agents Time: 5438
+a3 ghosts #67: 0.0
+Ghosts #66; Agents Time: 5647
+a3 ghosts #66: 0.0
+Ghosts #65; Agents Time: 5793
+a3 ghosts #65: 0.0
+Ghosts #69; Agents Time: 5801
+a3 ghosts #69: 0.0
+Ghosts #63; Agents Time: 5913
+a3 ghosts #63: 0.0
+Ghosts #68; Agents Time: 6050
+a3 ghosts #68: 0.0
+Ghosts #61; Agents Time: 6092
+a3 ghosts #61: 0.0
+Ghosts #64; Agents Time: 6176
+a3 ghosts #64: 0.0
+Ghosts #60; Agents Time: 6351
+a3 ghosts #60: 0.0
+Ghosts #54; Agents Time: 6366
+a3 ghosts #54: 0.0
+Ghosts #62; Agents Time: 6380
+a3 ghosts #62: 0.0
+Ghosts #59; Agents Time: 6535
+a3 ghosts #59: 0.0
+Ghosts #56; Agents Time: 6594
+a3 ghosts #56: 0.0
+Ghosts #58; Agents Time: 6751
+a3 ghosts #58: 0.0
+Ghosts #47; Agents Time: 7042
+a3 ghosts #47: 0.0
+Ghosts #57; Agents Time: 7111
+a3 ghosts #57: 0.0
+Ghosts #55; Agents Time: 7322
+a3 ghosts #55: 0.0
+Ghosts #53; Agents Time: 7375
+a3 ghosts #53: 0.0
+Ghosts #49; Agents Time: 7489
+a3 ghosts #49: 0.0
+Ghosts #52; Agents Time: 7606
+a3 ghosts #52: 0.0
+Ghosts #50; Agents Time: 7901
+a3 ghosts #50: 0.0
+Ghosts #46; Agents Time: 8107
+a3 ghosts #46: 0.0
+Ghosts #0; Agents Time: 8653
+a3 ghosts #0: 1.0
+Ghosts #48; Agents Time: 8668
+a3 ghosts #48: 0.0
+Ghosts #51; Agents Time: 8851
+a3 ghosts #51: 0.0
+Ghosts #43; Agents Time: 8933
+a3 ghosts #43: 0.0
+Ghosts #45; Agents Time: 9167
+a3 ghosts #45: 0.0
+Ghosts #42; Agents Time: 9747
+a3 ghosts #42: 0.0
+Ghosts #44; Agents Time: 9828
+a3 ghosts #44: 0.0
+Ghosts #37; Agents Time: 9928
+a3 ghosts #37: 0.0
+Ghosts #41; Agents Time: 9963
+a3 ghosts #41: 0.0
+Ghosts #39; Agents Time: 10365
+a3 ghosts #39: 0.0
+Ghosts #32; Agents Time: 10640
+a3 ghosts #32: 0.0
+Ghosts #38; Agents Time: 10659
+a3 ghosts #38: 0.0
+Ghosts #40; Agents Time: 10829
+a3 ghosts #40: 0.0
+Ghosts #33; Agents Time: 11237
+a3 ghosts #33: 0.0
+Ghosts #35; Agents Time: 11509
+a3 ghosts #35: 0.0
+Ghosts #30; Agents Time: 12471
+a3 ghosts #30: 0.0
+Ghosts #31; Agents Time: 12662
+a3 ghosts #31: 0.0
+Ghosts #27; Agents Time: 12784
+a3 ghosts #27: 0.0
+Ghosts #36; Agents Time: 12904
+a3 ghosts #36: 0.0
+Ghosts #28; Agents Time: 12934
+a3 ghosts #28: 0.0
+Ghosts #34; Agents Time: 13731
+a3 ghosts #34: 0.0
+Ghosts #24; Agents Time: 15979
+a3 ghosts #24: 0.0
+Ghosts #29; Agents Time: 16155
+a3 ghosts #29: 0.0
+Ghosts #25; Agents Time: 17062
+a3 ghosts #25: 0.0
+Ghosts #26; Agents Time: 17186
+a3 ghosts #26: 0.0
+Ghosts #23; Agents Time: 17297
+a3 ghosts #23: 0.0
+Ghosts #22; Agents Time: 18579
+a3 ghosts #22: 0.0
+Ghosts #19; Agents Time: 21466
+a3 ghosts #19: 0.0
+Ghosts #18; Agents Time: 23381
+a3 ghosts #18: 0.0
+Ghosts #21; Agents Time: 26713
+a3 ghosts #21: 0.0
+Ghosts #20; Agents Time: 27261
+a3 ghosts #20: 0.0
+Ghosts #17; Agents Time: 29901
+a3 ghosts #17: 0.0
+Ghosts #16; Agents Time: 32779
+a3 ghosts #16: 0.0

@@ -201,7 +201,7 @@ public class Agents {
                     int currUtil = 0;
 //                  simulates agentTwo
 //                    System.out.println("simul");
-                    for(int count = 0; count < 20; count++){
+                    for(int count = 0; count < 8; count++){
 //                      make duplicate so nothing changes
                         char[][] temp = new char[maze.length][];
                         for (int x = 0; x < maze.length; x++)
@@ -260,7 +260,9 @@ public class Agents {
                 moveGhosts(ghosts, reference, maze, start,end);
 //                this means ghosts have moved into same cell and the dude is dead
                 if (maze[start][end] != 'A') {
-                    return false;
+//System.out.println("deadb" + start + ", " + end);
+//Maze.printMaze(maze);
+ return false;
                 }
             } else {
                 maze[start][end] = reference[start][end];
@@ -270,6 +272,9 @@ public class Agents {
                 moveGhosts(ghosts, reference, maze, start, end);
 //              this means ghosts have moved into same cell and the dude is dead
                 if (maze[start][end] != 'A') {
+//System.out.println("dead" + start + ", " + end);
+//Maze.printMaze(maze);
+
                     return false;
                 }
             }
@@ -725,7 +730,7 @@ public class Agents {
     static PriorityQueue<index> copyGhosts(PriorityQueue<index> ghost){
         PriorityQueue<index> arr = new PriorityQueue<>(comparingInt(index::getDistance));
         for(index g: ghost){
-            arr.add(g);
+            arr.add(new index(g.x, g.y, g.distance));
         }
         return arr;
     }

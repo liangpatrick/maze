@@ -114,3 +114,4 @@ Ghosts #10; Agents Time: 25782
 Ghosts #9; Agents Time: 34375
 Ghosts #8; Agents Time: 72952
 Ghosts #7; Agents Time: 75338
+Ghosts #6; Agents Time: 107654
