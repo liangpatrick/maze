@@ -53,11 +53,11 @@ public class RunAgents extends Thread{
         duration = (endTime - startTime)/(long)Math.pow(10,9);
 //        gives updates
         System.out.println("Ghosts #" + ghosts + "; Agents Time: " + duration);
-       System.out.println("a1 ghosts #" +  ghosts + ": " +survivalRatesOne[ghosts]/100);
-       System.out.println("a2 ghosts #" +  ghosts + ": " +survivalRatesTwo[ghosts]/100);
+    //    System.out.println("a1 ghosts #" +  ghosts + ": " +survivalRatesOne[ghosts]/100);
+    //    System.out.println("a2 ghosts #" +  ghosts + ": " +survivalRatesTwo[ghosts]/100);
 //        System.out.println("a3 ghosts #" +  ghosts + ": " +survivalRatesThree[ghosts]/100);
-        System.out.println("a4 ghosts #" +  ghosts + ": " +survivalRatesFour[ghosts]/100);
-       System.out.println("a5 ghosts #" +  ghosts + ": " +survivalRatesFive[ghosts]/100);
+        // System.out.println("a4 ghosts #" +  ghosts + ": " +survivalRatesFour[ghosts]/100);
+    //    System.out.println("a5 ghosts #" +  ghosts + ": " +survivalRatesFive[ghosts]/100);
 
 
 
@@ -89,8 +89,8 @@ public class RunAgents extends Thread{
         duration = (endTime - startTime)/(long)Math.pow(10,9);
         System.out.println("Finished Time: " + duration);
         for( int x = 1; x < ghosts; x++) {
-//            System.out.println("A1 ghosts #" +  x + ": " +survivalRatesOne[x]/100);
-//            System.out.println("A2 ghosts #" +  x + ": " +survivalRatesTwo[x]/100);
+           System.out.println("A1 ghosts #" +  x + ": " +survivalRatesOne[x]/100);
+           System.out.println("A2 ghosts #" +  x + ": " +survivalRatesTwo[x]/100);
 //            System.out.println("A3 ghosts #" +  x + ": " +survivalRatesThree[x]/100);
             System.out.println("A4 ghosts #" +  x + ": " +survivalRatesFour[x]/100);
             System.out.println("A5 ghosts #" +  x + ": " +survivalRatesFive[x]/100);
