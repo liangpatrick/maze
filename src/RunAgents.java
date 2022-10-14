@@ -25,18 +25,18 @@ public class RunAgents extends Thread{
         char[][] m = null;
 //        iterates 100 times and collects data for all of them at the same time
         for(int iter = 1; iter <= 100; iter++ ) {
-//            m = maze.generateMaze(51);
-//            if(Agents.agentOne(ghosts, m, maze.visited)){
-//                survivalRatesOne[ghosts] += 1;
-//            }
-//            m = maze.generateMaze(51);
-//            if(Agents.agentTwo(ghosts, m, maze.visited,0, 0, null, null)){
-//                survivalRatesTwo[ghosts] += 1;
-//            }
-//            m = maze.generateMaze(51);
-//            if(Agents.agentThree(ghosts, m, maze.visited)){
-//                survivalRatesThree[ghosts] += 1;
-//            }
+           m = maze.generateMaze(51);
+           if(Agents.agentOne(ghosts, m, maze.visited)){
+               survivalRatesOne[ghosts] += 1;
+           }
+           m = maze.generateMaze(51);
+           if(Agents.agentTwo(ghosts, m, maze.visited,0, 0, null, null)){
+               survivalRatesTwo[ghosts] += 1;
+           }
+        //    m = maze.generateMaze(51);
+        //    if(Agents.agentThree(ghosts, m, maze.visited)){
+        //        survivalRatesThree[ghosts] += 1;
+        //    }
             m = maze.generateMaze(51);
             if(Agents.agentFour(ghosts, m, maze.visited)){
                 survivalRatesFour[ghosts] += 1;
@@ -53,11 +53,11 @@ public class RunAgents extends Thread{
         duration = (endTime - startTime)/(long)Math.pow(10,9);
 //        gives updates
         System.out.println("Ghosts #" + ghosts + "; Agents Time: " + duration);
-//        System.out.println("a1 ghosts #" +  ghosts + ": " +survivalRatesOne[ghosts]/100);
-//        System.out.println("a2 ghosts #" +  ghosts + ": " +survivalRatesTwo[ghosts]/100);
+       System.out.println("a1 ghosts #" +  ghosts + ": " +survivalRatesOne[ghosts]/100);
+       System.out.println("a2 ghosts #" +  ghosts + ": " +survivalRatesTwo[ghosts]/100);
 //        System.out.println("a3 ghosts #" +  ghosts + ": " +survivalRatesThree[ghosts]/100);
         System.out.println("a4 ghosts #" +  ghosts + ": " +survivalRatesFour[ghosts]/100);
-//        System.out.println("a5 ghosts #" +  ghosts + ": " +survivalRatesFive[ghosts]/100);
+       System.out.println("a5 ghosts #" +  ghosts + ": " +survivalRatesFive[ghosts]/100);
 
 
 
