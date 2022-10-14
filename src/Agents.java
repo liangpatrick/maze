@@ -119,7 +119,7 @@ public class Agents {
                 index closestGhost = ghosts.peek();
 //              if no valid move is found, then agent just remains in place
                 int tempStart = start, tempEnd = end;
-                index pos = moveAway(tempStart, tempEnd, start, end, closestGhost, maze, connectedComponent, reference);
+                index pos = moveAway(tempStart, tempEnd, start, end, closestGhost, maze, connectedComponent);
                 tempStart = pos.x;
                 tempEnd = pos.y;
                 //            if agent moves into ghost, its dead
@@ -187,6 +187,7 @@ public class Agents {
         while(maze[maze.length-1][maze.length-1] != 'A'){
 //          new positions which are updated when max utility is found
             int newX = start, newY = end;
+//            System.out.println(newX + ", " + newY + "; " + connectedComponent.get(List.of(newX, newY)));
 //          used to store max utility; has to be negative so the 0 first move can always be added
             int bigUtil = -1;
 //          goes through each possible move and then simulates
@@ -199,6 +200,7 @@ public class Agents {
                 if (connectedComponent.containsKey(List.of(currX, currY)) && maze[currX][currY] != '*') {
                     int currUtil = 0;
 //                  simulates agentTwo
+//                    System.out.println("simul");
                     for(int count = 0; count < 20; count++){
 //                      make duplicate so nothing changes
                         char[][] temp = new char[maze.length][];
@@ -211,6 +213,7 @@ public class Agents {
                         }
                     }
 //                  gets max utility
+//                    System.out.println(bigUtil + " u " + currUtil);
                     if (bigUtil < currUtil){
                         newX = currX;
                         newY = currY;
@@ -219,21 +222,22 @@ public class Agents {
                     else if (bigUtil == currUtil){
 //                        calculate a tie breaker based on shortest path; use hashmap set to decide!!!!!
                         if(connectedComponent.get(List.of(currX, currY)) < connectedComponent.get(List.of(newX, newY))){
+
                             newX = currX;
                             newY = currY;
                             bigUtil = currUtil;
 
                         }
-//                        else if (connectedComponent.get(List.of(currX, currY)) == connectedComponent.get(List.of(newX, newY))){
-////                            biased towards down/right
-//                            if (currX > newX || currY > newY){
-//                                newX = currX;
-//                                newY = currY;
-//                                bigUtil = currUtil;
-//                            }
-//                        }
+                        else if (connectedComponent.get(List.of(currX, currY)) == connectedComponent.get(List.of(newX, newY))){
+//                            biased towards down/right
+                            if (currX > newX || currY > newY){
+                                newX = currX;
+                                newY = currY;
+                                bigUtil = currUtil;
+                            }
+                        }
                     }
-
+//                    System.out.println(bigUtil + " X " + currUtil);
                 }
 
             }
@@ -244,7 +248,8 @@ public class Agents {
                 index closestGhost = ghosts.peek();
                 int tempStart = start, tempEnd = end;
 //              moves away from closestGhost
-                index pos = moveAway(tempStart, tempEnd, start, end, closestGhost, maze, connectedComponent, reference);
+//                System.out.println("move");
+                index pos = moveAway(tempStart, tempEnd, start, end, closestGhost, maze, connectedComponent);
                 tempStart = pos.x;
                 tempEnd = pos.y;
 //              next four lines of code are to move the agent while also ensuring if the agent doesn't move the agent appears correctly
@@ -296,7 +301,7 @@ public class Agents {
                 index closestGhost = ghosts.peek();
 //              if no valid move is found, then agent just remains in place
                 int tempStart = start, tempEnd = end;
-                index pos = moveAway(tempStart, tempEnd, start, end, closestGhost, maze, connectedComponent, reference);
+                index pos = moveAway(tempStart, tempEnd, start, end, closestGhost, maze, connectedComponent);
                 tempStart = pos.x;
                 tempEnd = pos.y;
 //              next four lines of code are to move the agent while also ensuring if the agent doesn't move the agent appears correctly
@@ -353,25 +358,38 @@ public class Agents {
         for(int i = 0; i < maze.length; i++)
             for(int j = 0; j < maze.length; j++)
                 reference[i][j] = maze[i][j];
-//        will be 0,0 unless called by agent3
         int start = 0, end = 0;
 //      array of index objects that store ghost positions so i can both accurately move them and keep track in case there is overlap
-        PriorityQueue<index> ghosts = null;
+        index[] ghosts = null;
+        index[] lastSeen = null;
+
 //      simulates until either agent is dead or reaches the end of the maze
-        while(maze[maze.length-1][maze.length-1] != 'A') {
+        while(maze[maze.length-1][maze.length-1] != 'A')
+        {
 //            Maze.printMaze(maze);
+
+
 //          stores path
-            List<index> path = findPath5(start, end, maze, connectedComponent, ghosts, reference);
-//            only activates when called by agent3
+            List<index> path = findPath5(start, end, maze, connectedComponent, lastSeen);
             if (ghosts == null) {
-                ghosts = addGhosts(num, maze, connectedComponent);
+                ghosts = addGhosts5(num, maze, connectedComponent);
+                lastSeen = copyGhosts(ghosts);
             }
+//            for (int x = 0; x < ghosts.length; x ++){
+//                System.out.println(ghosts[x].x + ", " + ghosts[x].y + "; " + lastSeen[x].x + ", " + lastSeen[x].y );
+//            }
+//            System.out.println(ghosts.toString());
+//            System.out.println(lastSeen.toString());
 //          no path
-            if (path == null) {
-                index closestGhost = ghosts.peek();
+            if (path == null){
+                int ind = indMin(ghosts);
+                index closestGhost = lastSeen[ind];
 //              if no valid move is found, then agent just remains in place
+//                Maze.printMaze(maze);
+//
                 int tempStart = start, tempEnd = end;
-                index pos = moveAway(tempStart, tempEnd, start, end, closestGhost, maze, connectedComponent, reference);
+//                System.out.println(tempStart + ", " + tempEnd);
+                index pos = moveAway(tempStart, tempEnd, start, end, closestGhost, maze, connectedComponent);
                 tempStart = pos.x;
                 tempEnd = pos.y;
 //              next four lines of code are to move the agent while also ensuring if the agent doesn't move the agent appears correctly
@@ -380,13 +398,13 @@ public class Agents {
                 end = tempEnd;
                 maze[start][end] = 'A';
 
-//                if(reference[start][end] == 'A') {
-//                    System.out.println("s, e: " + start + ", " + end);
-//                    System.out.println(reference[start][end]);
-//
+//                Maze.printMaze(maze);
+//                if (true) {
+//                    System.out.println("hello");
+//                    return false;
 //                }
-//                return false;
-                moveGhosts(ghosts, reference, maze, start, end);
+                moveGhosts(lastSeen, ghosts, reference, maze, start, end);
+
                 //          this means ghosts have moved into same cell and the dude is dead
                 if (maze[start][end] != 'A') {
                     return false;
@@ -394,30 +412,38 @@ public class Agents {
             } else {
 //              get first index instead of zeroeth since zeroeth index is just the starting point
                 index curr;
-                if (path.size() > 1) {
-                    curr = path.get(1);
-                } else {
+                if (path.size() == 1) {
                     curr = path.get(0);
+                    path.remove(0);
+                } else {
+                    curr = path.get(1);
+                    path.remove(0);
                 }
-                maze[curr.x][curr.y] = 'A';
-                start = curr.x;
-                end = curr.y;
-//
+                if(maze[curr.x][curr.y] == '*')
+                    return false;
+                else {
+                    maze[curr.x][curr.y] = 'A';
+                    start = curr.x;
+                    end = curr.y;
+                }
+
                 if (curr.prev != null) {
                     maze[curr.prev.x][curr.prev.y] = reference[curr.prev.x][curr.prev.y];
                 }
-                moveGhosts(ghosts, reference, maze, start, end);
+                moveGhosts(lastSeen, ghosts, reference, maze, start, end);
 //              this means ghosts have moved into same cell and the dude is dead
                 if (maze[curr.x][curr.y] != 'A') {
                     return false;
                 }
             }
-//
-//
+
+
         }
-//
-//
+
+
         return true;
+
+
 
 
     }
@@ -561,22 +587,34 @@ public class Agents {
         return null;
     }
 
-//    new heuristic that ignores ghosts in walls
-    static int calcH(int currX, int currY, PriorityQueue<index> g, char[][]reference){
+//    static int calcH(int currX, int currY, index[] g, char[][]reference){
+//        if (g == null){
+//            return 0;
+//        }
+//        int closestDistance = Integer.MAX_VALUE;
+////        ignores if ghost is in a wall, instead stays away from walls
+//        for(index ghost: g){
+//            if(reference[ghost.x][ghost.y] != '#')
+//                closestDistance = Math.min(getDistance(currX, currY, ghost.x, ghost.y), closestDistance);
+//
+//        }
+////        returns a negative value so that when g(cell value from start to curr) + h, the bigger positive h is the smaller f will become which means it will be selected first
+//        return -closestDistance;
+//    }
+
+    static int calcH(int currX, int currY, index[] g){
         if (g == null){
             return 0;
         }
         int closestDistance = Integer.MAX_VALUE;
-//        ignores if ghost is in a wall, instead stays away from walls
         for(index ghost: g){
-            if(reference[ghost.x][ghost.y] != '#')
-                closestDistance = Math.min(getDistance(currX, currY, ghost.x, ghost.y), closestDistance);
-
+            closestDistance = Math.min(getDistance(currX, currY, ghost.x, ghost.y), closestDistance);
         }
 //        returns a negative value so that when g(cell value from start to curr) + h, the bigger positive h is the smaller f will become which means it will be selected first
         return -closestDistance;
     }
-    private static List<index> findPath5(int start, int end, char[][] maze, HashMap<List<Integer>, Integer> connectedComponent, PriorityQueue<index> g, char[][]reference){
+
+    private static List<index> findPath5(int start, int end, char[][] maze, HashMap<List<Integer>, Integer> connectedComponent, index[] g){
 //      fringe to store cells that need to be visited
         PriorityQueue<Agents.index> fringe = new PriorityQueue<>(comparingInt(index::getF));
         HashMap<List<Integer>, Integer> visited = new HashMap<>();
@@ -608,7 +646,7 @@ public class Agents {
                 if (connectedComponent.containsKey(List.of(currX, currY)) && maze[currX][currY] != '*') {
 
                     int tempG = curr.g + 1;
-                    int tempH = calcH(currX, currY, g, reference);
+                    int tempH = calcH(currX, currY, g);
                     int tempF = tempH + tempG;
 
                     index temp = new index(currX, currY, curr);
@@ -648,7 +686,7 @@ public class Agents {
         }
     }
 
-    static index moveAway(int tempStart, int tempEnd, int start, int end, index closestGhost, char[][] maze, HashMap<List<Integer>, Integer> connectedComponent, char[][] ref){
+    static index moveAway(int tempStart, int tempEnd, int start, int end, index closestGhost, char[][] maze, HashMap<List<Integer>, Integer> connectedComponent){
         for (int i = 0; i < row.length; i++) {
             int currX = start + row[i];
             int currY = end + col[i];
@@ -736,7 +774,6 @@ public class Agents {
         }
 
     }
-//  used for agentTwo plus
     static void moveGhosts(PriorityQueue<index> g, char[][] reference, char[][] maze){
         for (index ghost: g){
 //          randomly decide if current ghost is going up/down left/right
@@ -769,6 +806,90 @@ public class Agents {
             }
         }
 
+    }
+
+
+    static index[] addGhosts5(int num, char[][] maze, HashMap<List<Integer>, Integer> connectedComponent){
+        index[] list = new index[num];
+//      gets random pair in maze
+        while (num > 0) {
+            int indx = (int) Math.floor(Math.random() * maze.length), indy = (int) Math.floor(Math.random() * maze[0].length);
+            if (connectedComponent.containsKey(List.of(indx, indy))) {
+                maze[indx][indy] = '*';
+                list[list.length - num] = new index(indx, indy);
+                num -= 1;
+            }
+        }
+        return list;
+    }
+
+
+
+
+
+
+    static void moveGhosts(index[] lastSeen, index[] g, char[][] reference, char[][] maze, int agentX, int agentY){
+        for (int x = 0; x < g.length; x ++){
+            index ghost = g[x];
+//          randomly decide if current ghost is going up/down left/right
+            int ind = (int) Math.floor(Math.random() * row.length);
+            int newX = ghost.x + row[ind], newY = ghost.y + col[ind];
+//          checks bounds
+            if ((0 <= newX && newX < maze.length) && (0 <= newY && newY < maze[0].length)) {
+//          checks against reference because that way walls are never missing; if reference is a wall then 50/50 chance to move into it or stay in original position
+                if (reference[newX][newY] == '#') {
+                    double chance = Math.random();
+                    if (chance < .5) {
+                        maze[newX][newY] = '*';
+//                        if (distance != null) {
+                        ghost.distance = getDistance(newX, newY, agentX, agentY);
+//                            System.out.println(distance[x]);
+//                        }
+//                      basically reverts previous ghost cell to whatever it should be; doesn't matter if multiple ghosts in same cell because ghosts are stored in ghosts array.
+                        maze[ghost.x][ghost.y] = reference[ghost.x][ghost.y];
+                        ghost.x = newX;
+                        ghost.y = newY;
+                    } else {
+//                  have to do this in case there are multiple ghosts in the same cell
+//                        maze[ghost.x][ghost.y] = '*';
+                    }
+
+                } else {
+                    lastSeen[x].x = newX;
+                    lastSeen[x].y = newY;
+                    maze[newX][newY] = '*';
+                    maze[ghost.x][ghost.y] = reference[ghost.x][ghost.y];
+//                    if (distance != null){
+                    ghost.distance = getDistance(newX, newY, agentX, agentY);
+//                        System.out.println(distance[x]);
+//                    }
+                    ghost.x = newX;
+                    ghost.y = newY;
+                }
+            }
+        }
+
+    }
+
+    //  gets index of smallest thing in ghost distances
+    static int indMin(index[] distances){
+        int ind = 0;
+        int min = distances[0].getDistance();
+
+        for (int x = 1; x < distances.length; x++){
+            if (distances[x].getDistance() <= min){
+                min = distances[x].getDistance();
+                ind = x;
+            }
+        }
+        return ind;
+    }
+    static index[] copyGhosts(index[] g){
+        index[] arr = new index[g.length];
+        for(int x = 0; x < g.length; x++){
+            arr[x] = new index(g[x].x, g[x].y);
+        }
+        return arr;
     }
 
 }
