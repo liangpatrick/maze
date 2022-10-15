@@ -112,7 +112,6 @@ public class Agents {
             if (ghosts == null) {
                 ghosts = addGhosts(num, maze, connectedComponent);
             }
-
 //          no path
             if (path == null) {
                 index closestGhost = ghosts.peek();
@@ -269,7 +268,6 @@ public class Agents {
             }
 
         }
-//        System.out.println("alive");
         return true;
     }
 
@@ -363,7 +361,6 @@ public class Agents {
                 ghosts = addGhosts5(num, maze, connectedComponent);
                 lastSeen = copyGhosts(ghosts);
             }
-
 //          no path
             if (path == null){
                 int ind = indMin(ghosts);
@@ -707,10 +704,7 @@ public class Agents {
                     double chance = Math.random();
                     if (chance < .5) {
                         maze[newX][newY] = '*';
-//                        if (distance != null) {
                             ghost.distance = getDistance(newX, newY, agentX, agentY);
-//                            System.out.println(distance[x]);
-//                        }
 //                      basically reverts previous ghost cell to whatever it should be; doesn't matter if multiple ghosts in same cell because ghosts are stored in ghosts array.
                         maze[ghost.x][ghost.y] = reference[ghost.x][ghost.y];
                         ghost.x = newX;
@@ -723,10 +717,7 @@ public class Agents {
                 } else {
                     maze[newX][newY] = '*';
                     maze[ghost.x][ghost.y] = reference[ghost.x][ghost.y];
-//                    if (distance != null){
                     ghost.distance = getDistance(newX, newY, agentX, agentY);
-//                        System.out.println(distance[x]);
-//                    }
                     ghost.x = newX;
                     ghost.y = newY;
                 }
@@ -799,28 +790,21 @@ public class Agents {
                     double chance = Math.random();
                     if (chance < .5) {
                         maze[newX][newY] = '*';
-//                        if (distance != null) {
                         ghost.distance = getDistance(newX, newY, agentX, agentY);
-//                            System.out.println(distance[x]);
-//                        }
 //                      basically reverts previous ghost cell to whatever it should be; doesn't matter if multiple ghosts in same cell because ghosts are stored in ghosts array.
                         maze[ghost.x][ghost.y] = reference[ghost.x][ghost.y];
                         ghost.x = newX;
                         ghost.y = newY;
-                    } else {
-//                  have to do this in case there are multiple ghosts in the same cell
-//                        maze[ghost.x][ghost.y] = '*';
                     }
+
 
                 } else {
                     lastSeen[x].x = newX;
                     lastSeen[x].y = newY;
                     maze[newX][newY] = '*';
                     maze[ghost.x][ghost.y] = reference[ghost.x][ghost.y];
-//                    if (distance != null){
                     ghost.distance = getDistance(newX, newY, agentX, agentY);
-//                        System.out.println(distance[x]);
-//                    }
+
                     ghost.x = newX;
                     ghost.y = newY;
                 }
